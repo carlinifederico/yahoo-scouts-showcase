@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yahoo Scouts — Character System</title>
+<meta name="description" content="The Yahoo Scouts character illustration system — two directions, four scouts, one contemporary and memeable visual language." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Yahoo">
+    <span class="brand-word">yahoo<span class="brand-bang">!</span></span>
+    <span class="brand-sub">scouts</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#styles">Styles</a>
+    <a href="#scouts">Scouts</a>
+    <a href="#specs">Specs</a>
+    <a href="#product">In&nbsp;Product</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="overview">
+    <div class="hero-inner">
+      <p class="eyebrow">Character illustration system</p>
+      <h1 class="hero-title">Meet the<br><span class="hl">Yahoo Scouts</span></h1>
+      <p class="hero-lede">
+        After a long search for the right visual path, we landed here — the direction we
+        believe is the most contemporary and the most fitting for Yahoo. It's built to carry
+        humor, to be endlessly memeable, and to connect with a broad, everyday audience.
+      </p>
+      <div class="hero-cta">
+        <a href="#styles" class="btn btn-primary">See the two directions</a>
+        <a href="#scouts" class="btn btn-ghost">Meet the scouts</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/scouts/science-b.png" alt="Science Scout" class="float f1" loading="eager" />
+      <img src="assets/scouts/sports-a.png" alt="Sports Scout" class="float f2" loading="eager" />
+      <img src="assets/scouts/weather-b.png" alt="Weather Scout" class="float f3" loading="eager" />
+    </div>
+  </section>
+
+  <!-- ============ TWO STYLES ============ -->
+  <section class="section styles" id="styles">
+    <div class="section-head reveal">
+      <p class="eyebrow">Two directions</p>
+      <h2>One system, two personalities</h2>
+      <p class="section-lede">
+        Every scout was explored along two paths. Together they map the range of the system —
+        from grounded and editorial to surreal and playful.
+      </p>
+    </div>
+
+    <div class="style-cards">
+      <article class="style-card reveal">
+        <div class="style-media a"><img src="assets/scouts/technology-a.png" alt="Humanoid style example" loading="lazy" /></div>
+        <div class="style-copy">
+          <span class="chip chip-a">Style&nbsp;A</span>
+          <h3>The Humanoid Path</h3>
+          <p>The idea is fused onto a human figure — relatable, editorial, grounded. The concept lives inside the character.</p>
+        </div>
+      </article>
+
+      <article class="style-card reveal">
+        <div class="style-media b"><img src="assets/scouts/technology-b.png" alt="Iconic style example" loading="lazy" /></div>
+        <div class="style-copy">
+          <span class="chip chip-b">Style&nbsp;B</span>
+          <h3>The Iconic Path</h3>
+          <p>The concept <em>becomes</em> the character — surreal, anthropomorphic, and made to be shared. This is where the humor lives.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SCOUTS GALLERY ============ -->
+  <section class="section scouts" id="scouts">
+    <div class="section-head reveal">
+      <p class="eyebrow">The squad</p>
+      <h2>Four scouts, your way</h2>
+      <p class="section-lede">Toggle between the two directions to see the full squad in each style.</p>
+
+      <div class="toggle" role="tablist" aria-label="Illustration style">
+        <button class="toggle-btn is-active" data-style="a" role="tab" aria-selected="true">Humanoid</button>
+        <button class="toggle-btn" data-style="b" role="tab" aria-selected="false">Iconic</button>
+        <span class="toggle-pill" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <!-- cards injected/toggled by script.js -->
+      <figure class="scout-card reveal" data-scout="science">
+        <div class="scout-img"><img alt="Science Scout" loading="lazy" /></div>
+        <figcaption><span class="scout-name">Science</span><span class="scout-tag"></span></figcaption>
+      </figure>
+      <figure class="scout-card reveal" data-scout="sports">
+        <div class="scout-img"><img alt="Sports Scout" loading="lazy" /></div>
+        <figcaption><span class="scout-name">Sports</span><span class="scout-tag"></span></figcaption>
+      </figure>
+      <figure class="scout-card reveal" data-scout="technology">
+        <div class="scout-img"><img alt="Technology Scout" loading="lazy" /></div>
+        <figcaption><span class="scout-name">Technology</span><span class="scout-tag"></span></figcaption>
+      </figure>
+      <figure class="scout-card reveal" data-scout="weather">
+        <div class="scout-img"><img alt="Weather Scout" loading="lazy" /></div>
+        <figcaption><span class="scout-name">Weather</span><span class="scout-tag"></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ SPECS ============ -->
+  <section class="section specs" id="specs">
+    <div class="section-head reveal">
+      <p class="eyebrow">Under the hood</p>
+      <h2>Built as a system</h2>
+      <p class="section-lede">Consistent construction, turnarounds and a shared prop language keep every scout on-model.</p>
+    </div>
+    <div class="specs-grid">
+      <figure class="spec reveal"><img src="assets/specs/matrix-front.png" alt="Front construction matrix" loading="lazy" /><figcaption>Construction · front</figcaption></figure>
+      <figure class="spec reveal"><img src="assets/specs/matrix-34.png" alt="Three-quarter matrix" loading="lazy" /><figcaption>Construction · ¾ view</figcaption></figure>
+      <figure class="spec reveal"><img src="assets/specs/props.png" alt="Prop language" loading="lazy" /><figcaption>Prop language</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ============ IN PRODUCT ============ -->
+  <section class="section product" id="product">
+    <div class="section-head reveal">
+      <p class="eyebrow">In context</p>
+      <h2>Living inside Yahoo</h2>
+      <p class="section-lede">The scouts at home in the product — as your personal squad across News, Finance, Sports and Weather.</p>
+    </div>
+    <figure class="product-shot reveal">
+      <img src="assets/product/ui-mockup.webp" alt="Scouts inside the Yahoo home experience" loading="lazy" />
+    </figure>
+  </section>
+
+  <!-- ============ ANIMATION ============ -->
+  <section class="section anim" id="anim">
+    <div class="section-head reveal">
+      <p class="eyebrow">Coming to life</p>
+      <h2>Motion tests</h2>
+      <p class="section-lede">Test animations for each scout land here soon.</p>
+    </div>
+    <div class="anim-grid" id="anim-grid">
+      <div class="anim-card reveal" data-scout="science"><span>Science</span></div>
+      <div class="anim-card reveal" data-scout="sports"><span>Sports</span></div>
+      <div class="anim-card reveal" data-scout="technology"><span>Technology</span></div>
+      <div class="anim-card reveal" data-scout="weather"><span>Weather</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-word">yahoo<span class="brand-bang">!</span></div>
+  <p>Yahoo Scouts — character system exploration. Presented as a campaign concept.</p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img alt="" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
