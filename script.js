@@ -36,22 +36,33 @@
   }
 
   /* ---------- Animation auto-detect ----------
-     Drop <scout>.mp4 files into assets/anim/ and they appear automatically. */
+     Drop <scout>.mp4 files into assets/anim/ and they appear automatically.
+     The <video> must live in the DOM to start loading in Chrome, so we append
+     it up front (hidden) and only reveal it once it can actually play. */
   document.querySelectorAll('.anim-card').forEach(function (card) {
     var scout = card.getAttribute('data-scout');
-    var src = 'assets/anim/' + scout + '.mp4';
-    var probe = document.createElement('video');
-    probe.muted = true;
-    probe.preload = 'metadata';
-    probe.addEventListener('loadeddata', function () {
-      probe.setAttribute('autoplay', '');
-      probe.setAttribute('loop', '');
-      probe.setAttribute('playsinline', '');
+    var video = document.createElement('video');
+    video.muted = true;
+    video.loop = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('autoplay', '');
+    video.setAttribute('playsinline', '');
+    video.preload = 'auto';
+    video.style.opacity = '0'; // hidden until confirmed playable
+    var reveal = function () {
+      if (card.classList.contains('has-video')) return;
       card.classList.add('has-video');
-      card.appendChild(probe);
-      probe.play().catch(function () {});
-    });
-    probe.src = src;
+      video.style.opacity = '';
+      video.play().catch(function () {});
+    };
+    video.addEventListener('loadeddata', reveal);
+    video.addEventListener('canplay', reveal);
+    video.addEventListener('error', function () { video.remove(); });
+    card.appendChild(video);
+    video.src = 'assets/anim/' + scout + '.mp4';
   });
 
   /* ---------- Reveal on scroll ---------- */
