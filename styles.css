@@ -175,7 +175,7 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
 .product-shot img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(95,1,209,.08);cursor:zoom-in}
 
 /* ---------- ANIMATION ---------- */
-.anim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,32px);max-width:1180px;margin:0 auto}
+.anim-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,3vw,32px);max-width:840px;margin:0 auto}
 .anim-item{margin:0}
 .anim-item figcaption{padding:16px 4px 0}
 .anim-item .cap-row{align-items:center}
@@ -228,7 +228,7 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .style-cards{grid-template-columns:1fr}
   .specs-grid{grid-template-columns:1fr 1fr}
-  .anim-grid{grid-template-columns:1fr;max-width:520px}
+  .anim-grid{max-width:600px}
   .feature{grid-template-columns:1fr}
   .feature-media{min-height:0;aspect-ratio:1}
 }
@@ -239,6 +239,7 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
   .gallery{grid-template-columns:1fr}
   .specs-grid{grid-template-columns:1fr}
   .sticker-grid{grid-template-columns:1fr}
+  .anim-grid{grid-template-columns:1fr;max-width:340px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
