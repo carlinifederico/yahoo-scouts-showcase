@@ -148,8 +148,10 @@ figcaption{display:flex;align-items:center;justify-content:space-between;padding
 .spec figcaption{justify-content:center;font-weight:500;color:var(--ink-soft);font-size:14px}
 
 /* ---------- PRODUCT ---------- */
-.product-shot{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(95,1,209,.08)}
-.product-shot img{width:100%}
+.product-both{display:flex;flex-direction:column;gap:clamp(30px,4.5vw,56px);margin-top:clamp(26px,4vw,46px)}
+.product-shot{margin:0}
+.product-shot .direction-head{margin:0 0 16px}
+.product-shot img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(95,1,209,.08);cursor:zoom-in}
 
 /* ---------- ANIMATION ---------- */
 .anim-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,22px)}
