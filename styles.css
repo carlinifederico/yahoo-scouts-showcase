@@ -81,14 +81,10 @@ a{color:inherit;text-decoration:none}
 }
 .hero-inner{position:relative;z-index:2}
 
-/* Intro hero — full-bleed yellow panel with two scouts peeking as soft decoration */
-.hero-intro{max-width:none;display:block;overflow:hidden;background:var(--yellow);padding:0;min-height:min(80vh,680px)}
-.hero-intro .hero-inner{max-width:var(--maxw);margin:0 auto;padding:clamp(52px,9vw,104px) clamp(18px,5vw,48px) clamp(150px,22vw,250px)}
+/* Intro hero — full-bleed yellow panel */
+.hero-intro{max-width:none;display:block;background:var(--yellow);padding:0;min-height:min(72vh,600px)}
+.hero-intro .hero-inner{max-width:var(--maxw);margin:0 auto;padding:clamp(60px,11vw,132px) clamp(18px,5vw,48px)}
 .hero-intro .hero-lede{color:#2b2233}
-.hero-decor{position:absolute;inset:0;z-index:1;pointer-events:none}
-.decor{position:absolute;bottom:0;filter:drop-shadow(0 22px 26px rgba(20,6,50,.10))}
-.decor-1{right:clamp(150px,19vw,360px);width:clamp(210px,25vw,400px);transform:translateY(30%)}
-.decor-2{right:clamp(-36px,-1.5vw,-8px);width:clamp(190px,22vw,360px);transform:translateY(34%)}
 .hero-title{font-family:var(--font-display);font-weight:700;font-size:clamp(46px,7.8vw,92px);line-height:1;letter-spacing:-1px;margin:.2em 0 .35em}
 .hero-title .hl{color:var(--purple)}
 .hero-lede{font-size:clamp(17px,2.1vw,21px);color:var(--ink-soft);max-width:52ch;margin-bottom:32px}
@@ -196,6 +192,15 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
 .anim-card.has-video{border-style:solid;padding:0}
 .anim-card.has-video::before,.anim-card.has-video span{display:none}
 
+/* ---------- STICKERS ---------- */
+.section.stickers{max-width:1440px}
+.sticker-sheet{margin:0 0 clamp(24px,4vw,44px)}
+.sticker-sheet img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(95,1,209,.08);cursor:zoom-in}
+.sticker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,30px)}
+.sticker-shot{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);background:var(--lav-2);transition:transform .22s ease,box-shadow .22s ease}
+.sticker-shot:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.sticker-shot img{width:100%;display:block;aspect-ratio:848/1264;object-fit:cover;cursor:zoom-in}
+
 /* ---------- FOOTER ---------- */
 .footer{background:var(--purple);color:#fff;text-align:center;padding:clamp(48px,7vw,90px) 24px}
 .footer-word{font-family:var(--font-head);font-weight:700;font-size:clamp(40px,7vw,72px);letter-spacing:-1px}
@@ -219,9 +224,7 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;min-height:0;padding-top:32px}
   .hero-intro{min-height:auto}
-  .hero-intro .hero-inner{padding-bottom:clamp(150px,34vw,250px)}
-  .decor-1{right:auto;left:-28px;width:clamp(150px,33vw,240px);transform:translateY(32%)}
-  .decor-2{right:-22px;width:clamp(150px,33vw,240px);transform:translateY(36%)}
+  .sticker-grid{grid-template-columns:1fr 1fr}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .style-cards{grid-template-columns:1fr}
   .specs-grid{grid-template-columns:1fr 1fr}
@@ -235,8 +238,7 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
   .brand-sub{display:none}
   .gallery{grid-template-columns:1fr}
   .specs-grid{grid-template-columns:1fr}
-  .decor-1{width:clamp(120px,42vw,200px);left:-22px}
-  .decor-2{width:clamp(120px,42vw,200px);right:-22px}
+  .sticker-grid{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
