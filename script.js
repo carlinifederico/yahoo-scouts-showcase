@@ -24,7 +24,7 @@
 
     // any image marked zoomable opens the lightbox
     document.querySelectorAll(
-      '.scout-card img, .spec img, .style-media img, .product-shot img, .avatar img, .history-item img'
+      '.scout-card img, .spec img, .style-media img, .product-shot img, .avatar img, .history-item img, .feature-media img'
     ).forEach(function (img) {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', function () { openLightbox(img.src, img.alt); });
