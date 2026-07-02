@@ -194,7 +194,7 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
 
 /* ---------- STICKERS ---------- */
 .section.stickers{max-width:1440px}
-.sticker-sheet{margin:0 0 clamp(24px,4vw,44px)}
+.sticker-sheet{margin:clamp(24px,4vw,44px) 0 0}
 .sticker-sheet img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(95,1,209,.08);cursor:zoom-in}
 .sticker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,30px)}
 .sticker-shot{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);background:var(--lav-2);transition:transform .22s ease,box-shadow .22s ease}
