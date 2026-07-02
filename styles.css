@@ -157,9 +157,10 @@ figcaption{padding:18px clamp(18px,2.4vw,26px)}
 .spec figcaption{justify-content:center;font-weight:500;color:var(--ink-soft);font-size:14px}
 
 /* ---------- PRODUCT ---------- */
-.section.product{max-width:1720px;padding-left:clamp(12px,3vw,32px);padding-right:clamp(12px,3vw,32px)}
+.section.product{max-width:1920px;padding-left:clamp(10px,2vw,24px);padding-right:clamp(10px,2vw,24px)}
 .product-both{display:flex;flex-direction:column;gap:clamp(48px,7vw,96px);margin-top:clamp(30px,4vw,52px)}
 .product-shot{margin:0}
+.product-full{margin-top:clamp(30px,4vw,52px)}
 .product-shot .direction-head{margin:0 0 18px}
 .product-shot img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(95,1,209,.08);cursor:zoom-in}
 
