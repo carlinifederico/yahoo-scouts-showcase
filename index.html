@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=9" />
+<link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
 
@@ -30,7 +30,7 @@
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section class="hero" id="overview">
+  <section class="hero hero-intro" id="overview">
     <div class="hero-inner">
       <p class="eyebrow">Character Development</p>
       <h1 class="hero-title">Meet the<br><span class="hl">Yahoo Scouts</span></h1>
@@ -44,10 +44,9 @@
         <a href="#product" class="btn btn-ghost">See them in product</a>
       </div>
     </div>
-    <div class="hero-art">
-      <img src="assets/scouts/science-b.png" alt="Science Scout" class="float f1" loading="eager" />
-      <img src="assets/scouts/sports-a.png" alt="Sports Scout" class="float f2" loading="eager" />
-      <img src="assets/scouts/weather-b.png" alt="Weather Scout" class="float f3" loading="eager" />
+    <div class="hero-decor" aria-hidden="true">
+      <img src="assets/hero/sports-a-cut.png?1" class="decor decor-1" alt="" loading="eager" />
+      <img src="assets/hero/weather-b-cut.png?1" class="decor decor-2" alt="" loading="eager" />
     </div>
   </section>
 
@@ -118,7 +117,7 @@
     <div class="section-head reveal">
       <p class="eyebrow">Coming to life</p>
       <h2>Animation tests</h2>
-      <p class="section-lede">First animation tests — bringing three of the scouts to life.</p>
+      <p class="section-lede">First animation tests — bringing four of the scouts to life.</p>
     </div>
     <div class="anim-grid" id="anim-grid">
       <figure class="anim-item reveal">
@@ -132,6 +131,10 @@
       <figure class="anim-item reveal">
         <div class="anim-card" data-scout="gaming"><span>Gaming</span></div>
         <figcaption><div class="cap-row"><span class="scout-name">Gaming</span><span class="scout-tag tag-iconic">Iconic</span></div></figcaption>
+      </figure>
+      <figure class="anim-item reveal">
+        <div class="anim-card" data-scout="horoscope"><span>Horoscope</span></div>
+        <figcaption><div class="cap-row"><span class="scout-name">Horoscope</span><span class="scout-tag tag-humanoid">Humanoid</span></div></figcaption>
       </figure>
     </div>
   </section>
@@ -151,6 +154,6 @@
   <img alt="" />
 </div>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>
