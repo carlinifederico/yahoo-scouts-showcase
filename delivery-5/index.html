@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yahoo Scouts — Entrega #5 (boceto editable)</title>
+<meta name="description" content="Yahoo Scouts — Entrega #5. De un set de personajes a un mundo con un elenco. Boceto de trabajo con galerías editables." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="d5.css?v=1" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Yahoo Scouts">
+    <img src="../assets/brand/yahoo-logo.png" class="brand-logo" alt="Yahoo" />
+    <span class="brand-sub">scouts</span>
+    <span class="brand-badge">Entrega&nbsp;#5</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#intro">Intro</a>
+    <a href="#world">The&nbsp;World</a>
+    <a href="#scouts">Scouts</a>
+    <a href="#system">System</a>
+    <a href="#env">Environment</a>
+    <a href="#anim">Animation</a>
+    <a href="#product">In&nbsp;Product</a>
+    <a href="#next">Next</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ INTRO ============ -->
+  <section class="hero-intro" id="intro">
+    <div class="hero-inner">
+      <p class="eyebrow">Entrega #5 · World-building</p>
+      <h1 class="hero-title">De un set de personajes<br><span class="hl">a un mundo con un elenco.</span></h1>
+      <p class="hero-lede">Esta ronda no reabre el estilo: el editorial ya está aprobado.
+      Va en profundidad sobre pocos scouts que viven en un mismo universo.</p>
+      <div class="chips">
+        <div class="saidchip"><b>Ustedes dijeron</b>El editorial funciona → nos quedamos ahí.</div>
+        <div class="saidchip"><b>Ustedes dijeron</b>Que el entorno cuente la historia, no la cara.</div>
+        <div class="saidchip"><b>Ustedes dijeron</b>Que se lean como Yahoo, no genéricos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE WORLD ============ -->
+  <section class="section" id="world">
+    <div class="section-head reveal">
+      <p class="eyebrow">01 · The World</p>
+      <h2>Un elenco, un mismo mundo</h2>
+      <p class="section-lede">Comparten mundo y un <i>lore</i> ligero — lo justo para sentirse una familia.
+      Norte: <b>Smiling Friends</b>, estilos que conviven manteniendo personalidad.</p>
+    </div>
+    <div class="gwrap reveal">
+      <div class="gal cols-4" data-gallery="world" data-accept="image/*" data-tile="wide"
+           data-hint="Lineup / escena del cast completo · arrastrá para ordenar"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ HERO SCOUTS ============ -->
+  <section class="section" id="scouts">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 · Hero Scouts</p>
+      <h2>El cast</h2>
+      <p class="section-lede">La ownability viene de la <b>historia</b>, no del estilo. Cada scout tiene
+      su galería propia: cargá los renders y ordenalos con el <b>+</b>.</p>
+    </div>
+
+    <!-- SPORTS -->
+    <div class="card reveal" style="margin-bottom:22px">
+      <span class="chip chip-y">Hero scout</span>
+      <h3>The Sports Scout</h3>
+      <p class="role">El que vive el partido en tiempo real</p>
+      <div class="bible-rows">
+        <div class="brow"><div class="lbl">Hábito</div><div class="val">No se pierde un juego; grita los goles solo.</div></div>
+        <div class="brow"><div class="lbl">Accesorios</div><div class="val">Bufanda del equipo, radio, calendario de fixture.</div></div>
+        <div class="brow"><div class="lbl">Locación</div><div class="val">El sillón-tribuna, entre banderas.</div></div>
+        <div class="iykyk"><div class="lbl">Gancho IYKYK</div><div class="val">Reacciona al resultado en vivo (hook editable por evento).</div></div>
+      </div>
+      <div class="gwrap">
+        <div class="gal cols-4" data-gallery="scout-sports" data-accept="image/*"
+             data-hint="Renders del Sports Scout"></div>
+      </div>
+    </div>
+
+    <!-- GAMING -->
+    <div class="card reveal" style="margin-bottom:22px">
+      <span class="chip chip-p">Hero scout</span>
+      <h3>The Gaming Scout</h3>
+      <p class="role">No mira la partida: la juega</p>
+      <div class="bible-rows">
+        <div class="brow"><div class="lbl">Hábito</div><div class="val">Maratón nocturna, cero sueño, reflejos absurdos.</div></div>
+        <div class="brow"><div class="lbl">Accesorios</div><div class="val">Silla gamer, teclado mecánico, cables imposibles.</div></div>
+        <div class="brow"><div class="lbl">Locación</div><div class="val">Cuarto en penumbra con luz RGB.</div></div>
+        <div class="iykyk"><div class="lbl">Gancho IYKYK</div><div class="val">Cabeza tipo cubo que flota y rota (lo que ya funcionó en animación).</div></div>
+      </div>
+      <div class="gwrap">
+        <div class="gal cols-4" data-gallery="scout-gaming" data-accept="image/*"
+             data-hint="Renders del Gaming Scout"></div>
+      </div>
+    </div>
+
+    <!-- WEATHER -->
+    <div class="card reveal" style="margin-bottom:22px">
+      <span class="chip chip-c">Hero scout</span>
+      <h3>The Weather Scout</h3>
+      <p class="role">El caso de prueba: ¿importa la cara o el clima?</p>
+      <div class="bible-rows">
+        <div class="brow"><div class="lbl">Hábito</div><div class="val">Vive el pronóstico en carne propia: se moja, tiembla, se broncea.</div></div>
+        <div class="brow"><div class="lbl">Accesorios</div><div class="val">Paraguas, termómetro, botas de lluvia.</div></div>
+        <div class="brow"><div class="lbl">Locación</div><div class="val">Adentro del clima, no al lado.</div></div>
+        <div class="iykyk"><div class="lbl">Gancho IYKYK</div><div class="val">La escena ES el estado del tiempo (probamos entorno vs. cara acá).</div></div>
+      </div>
+      <div class="gwrap">
+        <div class="gal cols-4" data-gallery="scout-weather" data-accept="image/*"
+             data-hint="Renders del Weather Scout"></div>
+      </div>
+    </div>
+
+    <!-- BOOKS -->
+    <div class="card reveal" style="margin-bottom:22px">
+      <span class="chip chip-y">Hero scout</span>
+      <h3>The Books Scout</h3>
+      <p class="role">El rey del storytelling ambiental</p>
+      <div class="bible-rows">
+        <div class="brow"><div class="lbl">Hábito</div><div class="val">Siempre en el capítulo final; llora con los plot twists.</div></div>
+        <div class="brow"><div class="lbl">Accesorios</div><div class="val">Torres de libros, taza, luz de velador.</div></div>
+        <div class="brow"><div class="lbl">Locación</div><div class="val">Rincón de lectura sepultado en pilas.</div></div>
+        <div class="iykyk"><div class="lbl">Gancho IYKYK</div><div class="val">El drama de BookTok — referencias culturales de actualidad.</div></div>
+      </div>
+      <div class="gwrap">
+        <div class="gal cols-4" data-gallery="scout-books" data-accept="image/*"
+             data-hint="Renders del Books Scout"></div>
+      </div>
+    </div>
+
+    <!-- HOROSCOPE — con historia completa -->
+    <div class="story reveal">
+      <div class="story-media">
+        <div class="gwrap" style="margin:0">
+          <div class="gal cols-2" data-gallery="scout-horoscope" data-accept="image/*"
+               data-hint="Renders del Horóscopo Scout" data-dark="1"></div>
+        </div>
+      </div>
+      <div>
+        <span class="chip chip-c">Historia completa</span>
+        <h3>The Horoscope Scout</h3>
+        <p class="role">La mística del cast — está en todas las presentaciones</p>
+        <p>Antes de que el sol salga, el Horóscopo ya está despierto: <b>lee el cielo como quien
+        lee el diario</b>. Vive en una buhardilla llena de cartas, cristales y un mapa estelar
+        que se actualiza solo. No predice el futuro; lo <b>interpreta con humor</b> — sabe que
+        medio mundo lo lee "por las dudas".</p>
+        <p>Su rutina: revisar los tránsitos, anotar la energía del día y mandar el aviso.
+        Cuando hay luna llena, se le nota: la escena se llena de estrellas y el personaje casi
+        desaparece dentro de su propio <b>entorno cósmico</b> — el caso perfecto de "la escena
+        cuenta el chiste".</p>
+        <p>Gancho IYKYK: <b>"Mercurio retrógrado"</b> como excusa universal. A 24–32px queda
+        una sola constelación reconocible; en grande, todo su universo.</p>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ THE SYSTEM ============ -->
+  <section class="section" id="system">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 · The System</p>
+      <h2>Un scout, todos los tamaños</h2>
+      <p class="section-lede">Adaptativo como un logo: grande = cuerpo y escena · chico = un elemento
+      reconocible (24–32px). La escena se destila hasta un solo ícono.</p>
+    </div>
+    <div class="footstrip reveal">
+      <div class="foot f-lg"><div class="box dark">Full body + escena</div><small>LARGE · viñeta</small></div>
+      <div class="foot f-md"><div class="box">Torso</div><small>MEDIUM</small></div>
+      <div class="foot f-sm"><div class="box">Head</div><small>SMALL · 60px</small></div>
+      <div class="foot f-xs"><div class="box">◨</div><small>24–32px</small></div>
+    </div>
+    <div class="gwrap reveal">
+      <div class="gal cols-4" data-gallery="system" data-accept="image/*"
+           data-hint="Estudios de footprints / mismo scout en tamaños"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ ENVIRONMENT ============ -->
+  <section class="section" id="env">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 · Environment as Narrator</p>
+      <h2>Que la escena cuente el chiste</h2>
+      <p class="section-lede">El peso narrativo se corre al entorno y a los props. El personaje puede
+      pesar menos; la escena da lugar a referencias y humor IYKYK. (Stuart, +1 Abhi.)</p>
+    </div>
+
+    <div class="compare reveal">
+      <div>
+        <div class="box a">Cara zoomeada<small>Todo el detalle en el personaje</small></div>
+      </div>
+      <div>
+        <div class="box b">Personaje dentro de la escena<small>La escena contextualiza y hace el chiste</small></div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:clamp(32px,4vw,52px) 0 8px" class="reveal">La capa ADN Yahoo — lo <i>ownable</i></h3>
+    <p class="section-lede reveal">Motivos recurrentes de la herencia Yahoo incrustados en cada scout →
+    un sticker <b>se lee como Yahoo Scout</b> sin uniformar el estilo. El "anchor back to Yahoo" de todas las rondas.</p>
+    <div class="dna reveal">
+      <span>El Wink !</span><span>Messenger smiley</span><span>Delfín</span>
+      <span>Purple</span><span>Viejos "audibles"</span><span>Badges</span>
+    </div>
+
+    <div class="gwrap reveal" style="margin-top:clamp(28px,4vw,44px)">
+      <div class="gal cols-3" data-gallery="environment" data-accept="image/*" data-tile="wide"
+           data-hint="Estudios de entorno / escenas / props"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ ANIMATION ============ -->
+  <section class="section" id="anim">
+    <div class="section-head reveal">
+      <p class="eyebrow">05 · Animation</p>
+      <h2>El mundo también se mueve</h2>
+      <p class="section-lede">Micro-loops que le dan vida sin saturar: el cubo que flota y rota,
+      la lluvia que cae, la constelación que titila. Poca animación, bien puesta. Soltá los clips
+      con el <b>+</b> (acepta <b>video</b> e imagen).</p>
+    </div>
+    <div class="gwrap reveal">
+      <div class="gal cols-3" data-gallery="animation" data-accept="video/*,image/*"
+           data-hint="Animation tests · .mp4 / .webm o frames"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ IN PRODUCT ============ -->
+  <section class="section" id="product">
+    <div class="section-head reveal">
+      <p class="eyebrow">06 · In Product</p>
+      <h2>¿Movemos el producto para darle aire?</h2>
+      <p class="section-lede">Pregunta abierta a Yahoo, no una decisión tomada: menos scouts a la vez
+      y viñeta más grande vs. el círculo 60×60 actual.</p>
+    </div>
+    <div class="mock-row reveal">
+      <div class="mock now">
+        <h4>Hoy · 60×60</h4>
+        <div class="dots">
+          <span class="d">S</span><span class="d">S</span><span class="d">S</span>
+          <span class="d">S</span><span class="d">S</span><span class="d">S</span>
+        </div>
+      </div>
+      <div class="mock next">
+        <h4>Propuesta · más aire</h4>
+        <div class="airy">
+          <span class="b">Scout + escena</span><span class="b">Scout + escena</span>
+        </div>
+      </div>
+    </div>
+    <div class="gwrap reveal">
+      <div class="gal cols-2" data-gallery="in-product" data-accept="image/*" data-tile="wide"
+           data-hint="Mockups in-product"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ NEXT ============ -->
+  <section class="section" id="next">
+    <div class="section-head reveal">
+      <p class="eyebrow">07 · Next</p>
+      <h2>Qué sigue</h2>
+    </div>
+    <div class="two reveal">
+      <div class="card">
+        <h3 style="font-size:22px">Nosotros (3dar)</h3>
+        <p style="color:var(--ink-soft);margin-top:6px">Más scouts entrando al mundo · escenas refinadas · character bibles completas.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:22px">Necesitamos de Yahoo</h3>
+        <p style="color:var(--ink-soft);margin-top:6px">Decisión de layout · quién firma la aprobación creativa final.</p>
+      </div>
+    </div>
+    <div class="check reveal">
+      <div class="lbl">Cómo sabemos que la ronda cerró</div>
+      <p>✓ Se puede señalar un sticker y decir <b>"eso es un Yahoo Scout"</b> → ownability resuelta.</p>
+      <p>✓ Cada hero scout se lee a <b>24–32px</b> con un solo elemento.</p>
+      <p>✓ El entorno cuenta el chiste <b>sin depender de la cara</b>.</p>
+      <p>✓ Yahoo <b>responde la pregunta de layout</b>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img src="../assets/brand/yahoo-logo.png" class="footer-logo" alt="Yahoo" />
+  <p>Yahoo Scouts · Entrega #5 · 3dar — boceto de trabajo. Las galerías son editables:
+  cargás y ordenás tus imágenes, después "Exportar" para publicarlas.</p>
+</footer>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox"><button class="lightbox-close" id="lbClose" aria-label="Cerrar">&times;</button></div>
+<!-- toast -->
+<div class="toast" id="toast"></div>
+
+<script src="d5.js?v=1"></script>
+</body>
+</html>
