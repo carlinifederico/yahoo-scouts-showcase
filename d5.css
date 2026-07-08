@@ -218,7 +218,7 @@ a{color:inherit;text-decoration:none}
 .device figcaption{margin-top:12px;font-size:13px;color:var(--ink-soft);font-weight:500;text-align:center}
 .phone{position:relative;background:#161219;border-radius:34px;padding:12px 10px 10px;box-shadow:var(--shadow);max-width:340px;margin-left:auto;margin-right:auto}
 .phone img{width:100%;border-radius:22px;display:block}
-.phone-notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:110px;height:20px;background:#161219;border-radius:0 0 14px 14px;z-index:2}
+.phone-notch{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:138px;height:24px;background:#161219;border-radius:0 0 16px 16px;z-index:2}
 .phone figcaption{color:#cbb9ec}
 
 /* ---------- state player ---------- */
@@ -310,19 +310,25 @@ a{color:inherit;text-decoration:none}
 /* ---- category rail overlay (mobile) ---- */
 /* fixed phone width + fixed-px rail → circle size & gap are stable on every
    viewport/zoom (cqw on the container itself would resolve against the viewport). */
-.phones{max-width:404px;margin:clamp(26px,4vw,44px) auto 0}
-.phone{width:384px;max-width:none}
-@media(max-width:420px){.phone{width:340px}}
+.phones{max-width:505px;margin:clamp(26px,4vw,44px) auto 0}
+.phone{width:480px;max-width:none}
+@media(max-width:520px){
+  .phone{width:92vw}
+  .rail-ovl{gap:3vw;padding:0 3vw}
+  .rail-circ{width:13.5vw}
+  .rc-clip,.rail-circ.all .rc-collage{width:13.5vw;height:13.5vw}
+  .rail-circ figcaption{font-size:3.1vw;margin-top:1.6vw;max-width:17vw}
+}
 .phones .phone{margin:0 auto}
-.phones .home-shot{border-radius:22px;overflow:hidden}
-.phones .shot{border-radius:22px}
-.rail-ovl{left:0;top:24.7%;width:100%;height:15.5%;display:flex;gap:12px;align-items:flex-start;padding:0 12px}
-.rail-circ{flex:0 0 auto;width:52px;display:flex;flex-direction:column;align-items:center;margin:0}
-.rc-clip{width:52px;height:52px;border-radius:50%;overflow:hidden;flex:0 0 auto;background:#e7e0f4}
+.phones .home-shot{border-radius:26px;overflow:hidden}
+.phones .shot{border-radius:26px}
+.rail-ovl{left:0;top:24.7%;width:100%;height:15.5%;display:flex;gap:15px;align-items:flex-start;padding:0 15px}
+.rail-circ{flex:0 0 auto;width:65px;display:flex;flex-direction:column;align-items:center;margin:0}
+.rc-clip{width:65px;height:65px;border-radius:50%;overflow:hidden;flex:0 0 auto;background:#e7e0f4}
 .rc-clip img,.rc-clip video{width:100%;height:100%;object-fit:cover;display:block}
-.rail-circ figcaption{flex:0 0 auto;display:block;font-family:var(--font-head);font-weight:600;font-size:12px;line-height:1.25;color:#241f30;margin-top:6px;white-space:nowrap;max-width:64px;overflow:hidden;text-overflow:ellipsis}
+.rail-circ figcaption{flex:0 0 auto;display:block;font-family:var(--font-head);font-weight:600;font-size:15px;line-height:1.25;color:#241f30;margin-top:8px;white-space:nowrap;max-width:80px;overflow:hidden;text-overflow:ellipsis}
 .rail-circ.all{position:relative}
-.rail-circ.all .rc-collage{display:grid;grid-template-columns:1fr 1fr;width:52px;height:52px;border-radius:50%;overflow:hidden;border:3px solid var(--cyan);flex:0 0 auto}
+.rail-circ.all .rc-collage{display:grid;grid-template-columns:1fr 1fr;width:65px;height:65px;border-radius:50%;overflow:hidden;border:4px solid var(--cyan);flex:0 0 auto}
 .rail-circ.all .rc-collage img{width:100%;height:100%;border-radius:0}
 .rail-circ.all figcaption{font-weight:700;color:#161219}
 
