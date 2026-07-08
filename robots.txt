@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /p-d5-73b97c27/
+Allow: /
