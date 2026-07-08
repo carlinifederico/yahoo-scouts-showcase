@@ -288,7 +288,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---- Your Scout Squad + Scout Activity overlay (desktop) ---- */
 .squad-ovl{left:9.05%;top:17.5%;width:23.8%;height:80%;container-type:inline-size;padding:0 .6cqw}
-.ov-h{font-family:var(--font-head);font-weight:800;font-size:5.4cqw;letter-spacing:.1cqw;color:#241f30;text-transform:uppercase;margin:0 0 3cqw}
+.ov-h{font-family:var(--font-head);font-weight:800;font-size:5.4cqw;line-height:1.2;letter-spacing:.1cqw;color:#241f30;text-transform:uppercase;margin:0 0 3cqw}
 .ov-h-sub{margin-top:5cqw}
 .ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6cqw 3cqw}
 .ov-tile{margin:0;display:block}
