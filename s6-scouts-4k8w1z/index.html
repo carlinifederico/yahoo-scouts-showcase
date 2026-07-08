@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Scouts — Delivery #6 · The editorial turn (internal draft)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../d5.css?v=10" />
+<style>
+  /* staging ribbon + V6 accents (no shared CSS touched) */
+  .stbar{background:var(--ink);color:#fff;font-family:var(--font-head);font-weight:600;font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.3px}
+  .stbar b{color:var(--yellow)}
+  .stbar a{color:#cbb9ec;text-decoration:underline}
+  .abc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.2vw,24px)}
+  @media(max-width:820px){.abc{grid-template-columns:1fr}}
+  .abc .lane{background:var(--lav-2);border:1px solid var(--lav);border-radius:var(--radius);padding:clamp(16px,2vw,24px)}
+  .abc .lane h4{font-family:var(--font-display);font-weight:700;font-size:20px;margin-bottom:2px}
+  .abc .lane .tag{font-size:12px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.6px}
+  .abc .lane p{font-size:13.5px;color:var(--ink-soft);margin:6px 0 12px}
+  .spectrum{display:flex;align-items:center;gap:0;border-radius:999px;overflow:hidden;margin-top:14px;box-shadow:var(--shadow-soft)}
+  .spectrum span{flex:1;text-align:center;padding:12px 8px;font-family:var(--font-head);font-weight:700;font-size:12.5px}
+  .spectrum .m1{background:#efe6ff;color:#5F01D1}.spectrum .m2{background:#d9c6ff;color:#3a0b6e}.spectrum .m3{background:#8b2bff;color:#fff}.spectrum .m4{background:#5F01D1;color:#fff}.spectrum .m5{background:#2a0b52;color:var(--yellow)}
+  .noteC{background:#fff;border:1px solid var(--lav);border-left:4px solid var(--purple);border-radius:12px;padding:12px 16px;margin-top:10px;font-size:14px;color:var(--ink-soft)}
+  .noteC b{color:var(--ink)}
+  .refstrip{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+  .refstrip figure{width:96px;text-align:center}
+  .refstrip img{width:96px;height:96px;object-fit:cover;border-radius:14px;box-shadow:var(--shadow-soft)}
+  .refstrip figcaption{font-size:11px;color:var(--ink-soft);margin-top:5px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="stbar">🔒 <b>Internal draft</b> · Scouts Delivery #6 — planning structure, not public. <a href="../hub-3dar-7q2m9x/">3dar hub</a></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Yahoo Scouts">
+    <img src="../assets/brand/yahoo-logo.png" class="brand-logo" alt="Yahoo" />
+    <span class="brand-sub">scouts</span>
+    <span class="brand-badge">Delivery&nbsp;#6</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#intro">Goals</a>
+    <a href="#cast">The&nbsp;three</a>
+    <a href="#abc">ABC&nbsp;test</a>
+    <a href="#product">In&nbsp;Product</a>
+    <a href="#sizes">Sizes</a>
+    <a href="#squad">All&nbsp;together</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ INTRO / GOALS ============ -->
+  <section class="hero-intro" id="intro">
+    <div class="hero-inner">
+      <p class="eyebrow">Delivery #6 · The editorial turn · draft</p>
+      <h1 class="hero-title mini">Grow it up: editorial, mature,<br>hand-drawn — in on the joke</h1>
+      <p class="hero-lede">From Meg &amp; Nigel this round: leave the children's-book feel behind. Push into the
+      New York Times editorial space — limited palettes, hand-drawn quality, and characters that are
+      genuinely <b>in on the joke</b>. Science is the benchmark; we take three concepts there.</p>
+      <div class="chips">
+        <div class="saidchip"><b>01</b>Editorial &amp; mature, not tropey / juvenile</div>
+        <div class="saidchip"><b>02</b>Limited color palette — usability + maturity</div>
+        <div class="saidchip"><b>03</b>Hand-drawn: color-matched strokes, no heavy vector outline</div>
+        <div class="saidchip"><b>04</b>Mild → wild spectrum to sell it internally</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE THREE ============ -->
+  <section class="section" id="cast">
+    <div class="section-head reveal">
+      <p class="eyebrow">01 · The three</p>
+      <h2>Three approved concepts,<br>redrawn editorial</h2>
+      <p class="section-lede">We build the round on concepts that already landed. <b>Science</b> is the
+      benchmark. <b>Books</b> and <b>Sports</b> come along — same characters, pushed into the mature,
+      hand-drawn direction. <span style="color:var(--purple);font-weight:600">(Sports is swappable for Weather.)</span></p>
+    </div>
+
+    <!-- SCIENCE — benchmark -->
+    <div class="two reveal" style="align-items:start">
+      <div class="card">
+        <span class="chip chip-c">Science · benchmark</span>
+        <h3>The one that works</h3>
+        <p style="color:var(--ink-soft);font-size:15px">Clever and unexpected, nice line style, in on the
+        joke (the dentist-office toy memory), a little serious, looking away. Only the details are
+        illustrated — hair, color-blocking. This is the tone the whole set chases.</p>
+        <div class="refstrip">
+          <figure><img src="../media/science-active.jpg" alt="Science — current"><figcaption>current concept</figcaption></figure>
+        </div>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">Science — new editorial art</span><span class="ghint">drop the redrawn frames</span><span class="gcount" data-for="science-new">0 items</span></div>
+        <div class="gal cols-3" data-gid="science-new"></div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:clamp(28px,4vw,44px) auto"></div>
+
+    <!-- BOOKS -->
+    <div class="two reveal" style="align-items:start">
+      <div class="card">
+        <span class="chip chip-p">Books</span>
+        <h3>The voracious reader</h3>
+        <p style="color:var(--ink-soft);font-size:15px">Concept has legs, but the current take reads too
+        juvenile. Push it mature: limited palette, hand-drawn, humor encrypted (not in your face). Show
+        it can be <b>in on book-talk</b> and change with what's trending.</p>
+        <div class="refstrip">
+          <figure><img src="../media/books-active.jpg" alt="Books — current"><figcaption>current concept</figcaption></figure>
+        </div>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">Books — new editorial art</span><span class="ghint">drop the redrawn frames</span><span class="gcount" data-for="books-new">0 items</span></div>
+        <div class="gal cols-3" data-gid="books-new"></div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:clamp(28px,4vw,44px) auto"></div>
+
+    <!-- SPORTS -->
+    <div class="two reveal" style="align-items:start">
+      <div class="card">
+        <span class="chip chip-y">Sports</span>
+        <h3>The one who's actually watching</h3>
+        <p style="color:var(--ink-soft);font-size:15px">Today he's a tropey announcer. He needs to be
+        <b>in on the joke</b> — knows Kawhi's back with the Raptors, on top of the real thing. Same
+        mature, hand-drawn treatment; jersey can change with the moment. <em>Swap to Weather if preferred.</em></p>
+        <div class="refstrip">
+          <figure><img src="../media/sports-active.jpg" alt="Sports — current"><figcaption>current concept</figcaption></figure>
+          <figure><img src="../media/weather-active.jpg" alt="Weather — alt"><figcaption>Weather (alt)</figcaption></figure>
+        </div>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">Sports — new editorial art</span><span class="ghint">drop the redrawn frames</span><span class="gcount" data-for="sports-new">0 items</span></div>
+        <div class="gal cols-3" data-gid="sports-new"></div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ ABC STYLE TEST ============ -->
+  <section class="section" id="abc">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 · ABC style test</p>
+      <h2>One concept, three art directions</h2>
+      <p class="section-lede">Per the brief — take one character (the benchmark, <b>Science</b>) and run it
+      through three distinct art directions, so leadership can pick a lane. Each lane pulls a different
+      attribute from Meg's mood board.</p>
+    </div>
+    <div class="abc reveal">
+      <div class="lane">
+        <span class="tag">Direction A</span>
+        <h4>Editorial line</h4>
+        <p>NYT-editorial, color-matched strokes, limited palette. The safe, mature baseline.</p>
+        <div class="gwrap"><div class="ghead"><span class="gcount" data-for="abc-a">0 items</span></div><div class="gal cols-2" data-gid="abc-a"></div></div>
+      </div>
+      <div class="lane">
+        <span class="tag">Direction B</span>
+        <h4>Textured / half-tone</h4>
+        <p>More grain and print texture, half-tone shading — hand-made, a touch more analog.</p>
+        <div class="gwrap"><div class="ghead"><span class="gcount" data-for="abc-b">0 items</span></div><div class="gal cols-2" data-gid="abc-b"></div></div>
+      </div>
+      <div class="lane">
+        <span class="tag">Direction C</span>
+        <h4>Marker / edgier</h4>
+        <p>Painted markers, imperfect lines, the wild end — most ownable, furthest from vector.</p>
+        <div class="gwrap"><div class="ghead"><span class="gcount" data-for="abc-c">0 items</span></div><div class="gal cols-2" data-gid="abc-c"></div></div>
+      </div>
+    </div>
+    <div class="noteC reveal"><b>Mild → wild.</b> Present the spread so the room sees the range and can buy in —
+    not one image out of context.</div>
+    <div class="spectrum reveal"><span class="m1">Mild · A</span><span class="m2">↔</span><span class="m3">B</span><span class="m4">↔</span><span class="m5">Wild · C</span></div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ IN PRODUCT ============ -->
+  <section class="section" id="product">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 · In Product</p>
+      <h2>Inside Yahoo Home</h2>
+      <p class="section-lede">The chosen direction, dropped into the real product — the Scout Squad grid and
+      the category rail. Same frames as #5, new art.</p>
+    </div>
+    <div class="two reveal" style="align-items:start">
+      <div>
+        <div class="browser"><div class="browser-bar"><span></span><span></span><span></span></div><img src="../media/desktop-ui.jpg" alt="Yahoo Home desktop frame" /></div>
+        <p class="cap-note" style="font-size:13px;color:var(--ink-soft);margin-top:10px">Desktop · Scout Squad grid + activity feed.</p>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">In-product mockups</span><span class="ghint">desktop + mobile comps</span><span class="gcount" data-for="product-new">0 items</span></div>
+        <div class="gal cols-2" data-gid="product-new"></div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ SIZES ============ -->
+  <section class="section" id="sizes">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 · Sizes</p>
+      <h2>One scout, every size</h2>
+      <p class="section-lede">Adaptive like a logo — large is body-and-scene, small is one recognizable
+      face. Every object earns its place at small sizes.</p>
+    </div>
+    <div class="gwrap reveal">
+      <div class="ghead"><span class="gname">Adaptive sizes — large · medium · small</span><span class="ghint">per chosen scout</span><span class="gcount" data-for="sizes-new">0 items</span></div>
+      <div class="gal cols-3" data-gid="sizes-new"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ ALL TOGETHER ============ -->
+  <section class="section" id="squad">
+    <div class="section-head reveal">
+      <p class="eyebrow">05 · All together</p>
+      <h2>The set, one world</h2>
+      <p class="section-lede">The three (and the rest as they come) shown together — the full cast as it
+      shows up in "Your Scout Squad".</p>
+    </div>
+    <div class="gwrap reveal">
+      <div class="ghead"><span class="gname">The squad</span><span class="ghint">all scouts together</span><span class="gcount" data-for="squad-new">0 items</span></div>
+      <div class="gal cols-4" data-gid="squad-new"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img src="../assets/brand/yahoo-logo.png" class="footer-logo" alt="Yahoo" />
+  <p>Yahoo Scouts · Delivery #6 (internal draft) · 3dar</p>
+</footer>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox"><button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button></div>
+
+<script src="../d5.js?v=10"></script>
+<script src="../stage.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+name: Publish delivery
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Staging folder to publish (e.g. s6-scouts-4k8w1z)"
+        required: true
+        type: string
+      target:
+        description: "Public destination"
+        required: true
+        type: choice
+        options:
+          - scouts
+          - icons
+      title:
+        description: "Delivery label (e.g. Delivery #6)"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "3dar-publish[bot]"
+          git config user.email "publish@3dar.io"
+
+      - name: Promote staging → public
+        run: bash scripts/publish.sh "${{ inputs.slug }}" "${{ inputs.target }}" "${{ inputs.title }}"
+
+      - name: Commit & push
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to publish — no changes."
+            exit 0
+          fi
+          git commit -m "Publish ${{ inputs.target }}: ${{ inputs.title }} (${{ inputs.slug }})"
+          git push

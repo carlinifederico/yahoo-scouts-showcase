@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>3dar hub — Yahoo deliveries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../d5.css?v=10" />
+<style>
+  body{background:#f6f2fd}
+  .wrap{max-width:960px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(18px,4vw,32px)}
+  .hub-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .hub-head img{height:26px}
+  .hub-head .sub{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--ink-soft)}
+  h1.hub-title{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,5vw,48px);letter-spacing:-.5px;margin:.1em 0 .2em}
+  .lede{color:var(--ink-soft);font-size:16px;max-width:64ch;margin-bottom:26px}
+  .tokbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--lav);border-radius:16px;padding:14px 16px;margin-bottom:26px;box-shadow:var(--shadow-soft)}
+  .tokbar .dot{width:10px;height:10px;border-radius:50%;background:#c9bde0;flex:none}
+  .tokbar.ok .dot{background:var(--ok);box-shadow:0 0 0 4px rgba(18,160,90,.16)}
+  .tokbar .lbl{font-family:var(--font-head);font-weight:700;font-size:13px}
+  .tokbar .hint{font-size:12.5px;color:var(--ink-soft)}
+  .tokbar input{flex:1;min-width:180px;border:1px solid var(--lav);border-radius:10px;padding:9px 12px;font-family:var(--font-head);font-size:13px}
+  .btn{font-family:var(--font-head);font-weight:600;font-size:14px;border:0;border-radius:999px;padding:10px 18px;cursor:pointer;transition:transform .15s ease;text-decoration:none;display:inline-block}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--purple);color:#fff}
+  .btn.ghost{background:var(--purple-100);color:var(--purple)}
+  .btn.small{padding:8px 14px;font-size:13px}
+  .cards{display:grid;gap:18px}
+  .dcard{background:#fff;border:1px solid var(--lav);border-radius:var(--radius);padding:clamp(18px,2.6vw,28px);box-shadow:var(--shadow-soft)}
+  .dcard .top{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .dcard .badge{font-family:var(--font-head);font-weight:700;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#fff;padding:5px 11px;border-radius:999px}
+  .badge.scouts{background:var(--purple)}
+  .badge.icons{background:#161219}
+  .dcard h3{font-family:var(--font-display);font-weight:700;font-size:24px;margin:8px 0 2px}
+  .dcard .slug{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--ink-soft);background:var(--lav-2);padding:3px 8px;border-radius:7px}
+  .dcard p{color:var(--ink-soft);font-size:14.5px;margin:10px 0 16px;max-width:60ch}
+  .dcard .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .dcard .fallback{font-size:12.5px;color:var(--ink-soft)}
+  .dcard .fallback a{color:var(--purple);text-decoration:underline}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--ink);color:#fff;font-size:13.5px;font-weight:600;padding:12px 20px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:90vw;text-align:center}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast.err{background:#b3243a}
+  .foot{margin-top:34px;font-size:12.5px;color:var(--ink-soft)}
+  .foot code{background:var(--lav-2);padding:2px 6px;border-radius:6px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hub-head">
+    <img src="../assets/brand/yahoo-logo.png" alt="Yahoo" />
+    <span class="sub">× 3dar · hub</span>
+  </div>
+  <h1 class="hub-title">Deliveries in the works</h1>
+  <p class="lede">Private staging for Yahoo work. Build here, preview privately, and hit <b>Publish</b> to
+  push a delivery live. Publishing triggers the GitHub Action that promotes the draft to the public site.</p>
+
+  <div class="tokbar" id="tokbar">
+    <span class="dot"></span>
+    <span class="lbl" id="tokLbl">Publish token</span>
+    <span class="hint" id="tokHint">Paste a fine-grained PAT (scope: Actions · read+write) once — stored only in this browser.</span>
+    <input type="password" id="tokInput" placeholder="github_pat_…" autocomplete="off" />
+    <button class="btn ghost small" id="tokSave">Save</button>
+    <button class="btn ghost small" id="tokClear" style="display:none">Clear</button>
+  </div>
+
+  <div class="cards" id="cards"></div>
+
+  <p class="foot">Repo: <code>carlinifederico/yahoo-scouts-showcase</code> · workflow: <code>publish.yml</code> ·
+  no secret is stored in this page — the token lives only in your browser's localStorage, the commit itself
+  runs under the workflow's own token.</p>
+</div>
+
+<script>
+(function () {
+  var OWNER = 'carlinifederico', REPO = 'yahoo-scouts-showcase', WF = 'publish.yml', REF = 'main';
+  var DELIVERIES = [
+    { name: 'Scouts · Delivery #6', target: 'scouts', badge: 'scouts', slug: 's6-scouts-4k8w1z', title: 'Delivery #6',
+      desc: 'The editorial turn — three approved concepts (Science · Books · Sports) redrawn mature, one run through an A/B/C style test, applied in product + sizes.' },
+    { name: 'Yahoo App Icons · V1', target: 'icons', badge: 'icons', slug: 'i1-icons-9r3t6b', title: 'V1',
+      desc: 'Discovery sprint — Mail · News · Weather, one app drawn every style, always shown in context, keeping the “Yep”.' }
+  ];
+  var TOKKEY = 'gh_publish_token';
+  var $ = function (s) { return document.querySelector(s); };
+
+  function token() { try { return localStorage.getItem(TOKKEY) || ''; } catch (e) { return ''; } }
+  function refreshTok() {
+    var has = !!token();
+    $('#tokbar').classList.toggle('ok', has);
+    $('#tokLbl').textContent = has ? 'Publish token set' : 'Publish token';
+    $('#tokHint').style.display = has ? 'none' : '';
+    $('#tokInput').style.display = has ? 'none' : '';
+    $('#tokSave').style.display = has ? 'none' : '';
+    $('#tokClear').style.display = has ? '' : 'none';
+  }
+  $('#tokSave').addEventListener('click', function () {
+    var v = $('#tokInput').value.trim(); if (!v) return;
+    try { localStorage.setItem(TOKKEY, v); } catch (e) {}
+    $('#tokInput').value = ''; refreshTok(); toast('Token saved in this browser');
+  });
+  $('#tokClear').addEventListener('click', function () {
+    try { localStorage.removeItem(TOKKEY); } catch (e) {} refreshTok(); toast('Token cleared');
+  });
+
+  var toastEl;
+  function toast(msg, err) {
+    if (!toastEl) { toastEl = document.createElement('div'); toastEl.className = 'toast'; document.body.appendChild(toastEl); }
+    toastEl.className = 'toast' + (err ? ' err' : ''); toastEl.textContent = msg; toastEl.classList.add('show');
+    clearTimeout(toast._t); toast._t = setTimeout(function () { toastEl.classList.remove('show'); }, 4200);
+  }
+
+  function publish(d) {
+    var tok = token();
+    var actionsUrl = 'https://github.com/' + OWNER + '/' + REPO + '/actions/workflows/' + WF;
+    if (!tok) { toast('No token — opening the Actions “Run workflow” page instead', true); window.open(actionsUrl, '_blank'); return; }
+    if (!confirm('Publish “' + d.name + '” live?\n\nThis promotes ' + d.slug + ' → ' + d.target + ' on the public site.')) return;
+    toast('Dispatching publish for ' + d.name + '…');
+    fetch('https://api.github.com/repos/' + OWNER + '/' + REPO + '/actions/workflows/' + WF + '/dispatches', {
+      method: 'POST',
+      headers: { 'Accept': 'application/vnd.github+json', 'Authorization': 'Bearer ' + tok, 'X-GitHub-Api-Version': '2022-11-28' },
+      body: JSON.stringify({ ref: REF, inputs: { slug: d.slug, target: d.target, title: d.title } })
+    }).then(function (r) {
+      if (r.status === 204) { toast('✅ Publishing — watch the run in Actions'); setTimeout(function () { window.open(actionsUrl, '_blank'); }, 700); }
+      else { r.text().then(function (t) { toast('Failed (' + r.status + '): ' + t.slice(0, 140), true); }); }
+    }).catch(function (e) { toast('Network error: ' + e.message, true); });
+  }
+
+  var cards = $('#cards');
+  DELIVERIES.forEach(function (d) {
+    var el = document.createElement('div'); el.className = 'dcard';
+    el.innerHTML =
+      '<div class="top"><span class="badge ' + d.badge + '">' + d.target + '</span>' +
+      '<span class="slug">/' + d.slug + '/</span></div>' +
+      '<h3>' + d.name + '</h3><p>' + d.desc + '</p>' +
+      '<div class="actions">' +
+      '<a class="btn ghost" href="../' + d.slug + '/" target="_blank">Preview ↗</a>' +
+      '<button class="btn primary pub">Publish →</button>' +
+      '<span class="fallback">or <a href="https://github.com/' + OWNER + '/' + REPO + '/actions/workflows/' + WF + '" target="_blank">Run in Actions</a></span>' +
+      '</div>';
+    el.querySelector('.pub').addEventListener('click', function () { publish(d); });
+    cards.appendChild(el);
+  });
+
+  refreshTok();
+})();
+</script>
+</body>
+</html>

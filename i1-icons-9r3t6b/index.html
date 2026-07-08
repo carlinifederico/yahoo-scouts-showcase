@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Yahoo App Icons — V1 · Discovery (internal draft)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../d5.css?v=10" />
+<style>
+  .stbar{background:var(--ink);color:#fff;font-family:var(--font-head);font-weight:600;font-size:12.5px;text-align:center;padding:7px 14px;letter-spacing:.3px}
+  .stbar b{color:var(--yellow)}
+  .stbar a{color:#cbb9ec;text-decoration:underline}
+  .ic-hero{background:linear-gradient(135deg,#2a0b52,#4a12a0);color:#fff;min-height:min(56vh,480px);display:flex;align-items:center}
+  .ic-hero .hero-inner{width:100%}
+  .ic-hero .eyebrow{color:var(--yellow)}
+  .ic-hero .hero-title,.ic-hero .hero-lede{color:#fff}
+  .ic-hero .hero-lede{color:rgba(255,255,255,.9)}
+  .yep{color:var(--yellow);font-weight:800}
+  .stylerow{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.2vw,24px)}
+  @media(max-width:820px){.stylerow{grid-template-columns:1fr}}
+  .stylerow .lane{background:var(--lav-2);border:1px solid var(--lav);border-radius:var(--radius);padding:clamp(16px,2vw,24px)}
+  .stylerow .lane h4{font-family:var(--font-display);font-weight:700;font-size:19px;margin-bottom:2px}
+  .stylerow .lane .tag{font-size:12px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.6px}
+  .stylerow .lane p{font-size:13px;color:var(--ink-soft);margin:6px 0 12px}
+  .appcard .glyph{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:24px;color:#fff;margin-bottom:12px}
+  .appcard.mail .glyph{background:linear-gradient(135deg,#5F01D1,#8b2bff)}
+  .appcard.news .glyph{background:linear-gradient(135deg,#161219,#3a2a52)}
+  .appcard.weather .glyph{background:linear-gradient(135deg,#4BC1E9,#5F01D1)}
+</style>
+</head>
+<body>
+
+<div class="stbar">🔒 <b>Internal draft</b> · Yahoo App Icons V1 — discovery structure, not public. <a href="../hub-3dar-7q2m9x/">3dar hub</a></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Yahoo App Icons">
+    <img src="../assets/brand/yahoo-logo.png" class="brand-logo" alt="Yahoo" />
+    <span class="brand-sub">app&nbsp;icons</span>
+    <span class="brand-badge">V1 · Discovery</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#intro">Goals</a>
+    <a href="#apps">The&nbsp;three</a>
+    <a href="#styles">Styles</a>
+    <a href="#context">In&nbsp;context</a>
+    <a href="#yep">The&nbsp;Yep</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO / GOALS ============ -->
+  <section class="ic-hero" id="intro">
+    <div class="hero-inner">
+      <p class="eyebrow">Yahoo App Icons · V1 · Discovery sprint</p>
+      <h1 class="hero-title mini">Relaunch the brand<br>across the apps</h1>
+      <p class="hero-lede">Every icon reads two things at once: <b>the service</b> and <b>Yahoo</b>.
+      A federal system — cousins, not siblings — where each brand can lean its own way while the family
+      holds. And we keep the <span class="yep">Yep!</span></p>
+      <div class="chips">
+        <div class="saidchip"><b>01</b>Federal model — each brand its own budget &amp; flag</div>
+        <div class="saidchip"><b>02</b>Cousins, not siblings (Jim Lanzone)</div>
+        <div class="saidchip"><b>03</b>Keep the “Yep” — service + Yahoo, both legible</div>
+        <div class="saidchip"><b>04</b>2-week discovery: Mail · News · Weather</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE THREE APPS ============ -->
+  <section class="section" id="apps">
+    <div class="section-head reveal">
+      <p class="eyebrow">01 · The three</p>
+      <h2>Start with the Home set</h2>
+      <p class="section-lede">Not the whole suite at once — a focused set from the Home ecosystem:
+      <b>Mail, News, Weather</b>. Land the art direction here, then personalize each brand.</p>
+    </div>
+
+    <div class="two reveal" style="align-items:start">
+      <div class="card appcard mail">
+        <div class="glyph">@</div>
+        <span class="chip chip-p">Mail</span>
+        <h3>Calm &amp; dependable</h3>
+        <p style="color:var(--ink-soft);font-size:15px">The reliable one — personal, quiet confidence. Reads
+        as mail at a glance, unmistakably Yahoo.</p>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">Mail — icon explorations</span><span class="ghint">drop drafts</span><span class="gcount" data-for="mail">0 items</span></div>
+        <div class="gal cols-3" data-gid="mail"></div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:clamp(28px,4vw,44px) auto"></div>
+
+    <div class="two reveal" style="align-items:start">
+      <div class="card appcard news">
+        <div class="glyph">N</div>
+        <span class="chip chip-p">News</span>
+        <h3>Modern &amp; current</h3>
+        <p style="color:var(--ink-soft);font-size:15px">In-the-know, contemporary, credible. The one that
+        has to feel modern without losing the Yahoo signal.</p>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">News — icon explorations</span><span class="ghint">drop drafts</span><span class="gcount" data-for="news">0 items</span></div>
+        <div class="gal cols-3" data-gid="news"></div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:clamp(28px,4vw,44px) auto"></div>
+
+    <div class="two reveal" style="align-items:start">
+      <div class="card appcard weather">
+        <div class="glyph">☀</div>
+        <span class="chip chip-p">Weather</span>
+        <h3>Clear &amp; friendly</h3>
+        <p style="color:var(--ink-soft);font-size:15px">Legible at a glance — three lines, a cloud, a sun.
+        Simple, warm, and still Yahoo.</p>
+      </div>
+      <div class="gwrap">
+        <div class="ghead"><span class="gname">Weather — icon explorations</span><span class="ghint">drop drafts</span><span class="gcount" data-for="weather">0 items</span></div>
+        <div class="gal cols-3" data-gid="weather"></div>
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ STYLES ============ -->
+  <section class="section" id="styles">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 · Style directions</p>
+      <h2>One app, every style</h2>
+      <p class="section-lede">Take one app — <b>News</b> — and draw it every way, so leadership picks a lane
+      before we go deep. If Jim says "hand-drawn", we go down that path and noodle each brand from there.</p>
+    </div>
+    <div class="stylerow reveal">
+      <div class="lane"><span class="tag">A</span><h4>Flat illustration</h4><p>Clean shapes, flat color, editorial.</p><div class="gwrap"><div class="ghead"><span class="gcount" data-for="st-flat">0 items</span></div><div class="gal cols-2" data-gid="st-flat"></div></div></div>
+      <div class="lane"><span class="tag">B</span><h4>Graphic keyline</h4><p>Bold, iconographic, strong key lines.</p><div class="gwrap"><div class="ghead"><span class="gcount" data-for="st-keyline">0 items</span></div><div class="gal cols-2" data-gid="st-keyline"></div></div></div>
+      <div class="lane"><span class="tag">C</span><h4>Line art</h4><p>Thin, elegant, minimal linework.</p><div class="gwrap"><div class="ghead"><span class="gcount" data-for="st-lineart">0 items</span></div><div class="gal cols-2" data-gid="st-lineart"></div></div></div>
+      <div class="lane"><span class="tag">D</span><h4>Dimensional</h4><p>Depth, soft shadow, tactile forms.</p><div class="gwrap"><div class="ghead"><span class="gcount" data-for="st-dim">0 items</span></div><div class="gal cols-2" data-gid="st-dim"></div></div></div>
+      <div class="lane"><span class="tag">E</span><h4>Hand-drawn</h4><p>Imperfect, warm, anti-corporate.</p><div class="gwrap"><div class="ghead"><span class="gcount" data-for="st-hand">0 items</span></div><div class="gal cols-2" data-gid="st-hand"></div></div></div>
+      <div class="lane"><span class="tag">F</span><h4>Pixel</h4><p>Playful, retro, ownably Yahoo.</p><div class="gwrap"><div class="ghead"><span class="gcount" data-for="st-pixel">0 items</span></div><div class="gal cols-2" data-gid="st-pixel"></div></div></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ IN CONTEXT ============ -->
+  <section class="section" id="context">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 · In context</p>
+      <h2>Always seen as a set</h2>
+      <p class="section-lede">Every direction shown on the same surfaces — the app store, the home screen —
+      so the decision is about the whole system, and against the competitive set (news vs. news, mail vs.
+      mail).</p>
+    </div>
+    <div class="gwrap reveal">
+      <div class="ghead"><span class="gname">Context mockups</span><span class="ghint">app store · home screen · competitive</span><span class="gcount" data-for="context">0 items</span></div>
+      <div class="gal cols-3" data-gid="context"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ============ THE YEP ============ -->
+  <section class="section" id="yep">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 · Brand signal</p>
+      <h2>Don't throw away the <span style="color:var(--purple)">“Yep”</span></h2>
+      <p class="section-lede">The Yahoo exclamation point is the through-line. Past rounds dropped it too
+      early and drifted. Every icon has to explain the service <b>and</b> that it's Yahoo — the Yep is how
+      the family stays a family.</p>
+    </div>
+    <div class="gwrap reveal">
+      <div class="ghead"><span class="gname">Yep integrations</span><span class="ghint">how the mark lives in each icon</span><span class="gcount" data-for="yep">0 items</span></div>
+      <div class="gal cols-3" data-gid="yep"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img src="../assets/brand/yahoo-logo.png" class="footer-logo" alt="Yahoo" />
+  <p>Yahoo App Icons · V1 Discovery (internal draft) · 3dar</p>
+</footer>
+
+<div class="lightbox" id="lightbox"><button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button></div>
+
+<script src="../d5.js?v=10"></script>
+<script src="../stage.js?v=1"></script>
+</body>
+</html>
