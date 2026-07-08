@@ -293,6 +293,8 @@ a{color:inherit;text-decoration:none}
 .ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6cqw 3cqw}
 .ov-tile{margin:0;display:block}
 .ov-tile img,.ov-tile video{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4.5cqw;display:block;background:#e7e0f4}
+.ov-clip{display:block;aspect-ratio:1;border-radius:4.5cqw;overflow:hidden;background:#e7e0f4}
+.ov-clip img,.ov-clip video{width:100%;height:100%;aspect-ratio:auto;border-radius:0}
 .ov-tile figcaption{font-family:var(--font-head);font-weight:700;font-size:4cqw;line-height:1.2;color:#2b2536;text-align:center;margin-top:1.6cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ov-btns{display:flex;gap:2.4cqw;margin:4cqw 0 0}
 .ov-btn{font-family:var(--font-head);font-weight:600;font-size:3.1cqw;border:.5cqw solid #dcd3ef;border-radius:99cqw;padding:2cqw 3.4cqw;color:#4a4460;white-space:nowrap;background:#fff}
