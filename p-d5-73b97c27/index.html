@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yahoo Scouts — Entrega #5 · En producto</title>
-<meta name="description" content="Yahoo Scouts — Entrega #5. Los scouts finales aplicados a los UI templates de Yahoo Home, con sus estados animados." />
+<title>Yahoo Scouts — Delivery #5 · In Product</title>
+<meta name="description" content="Yahoo Scouts — Delivery #5. The final scouts dropped into the real Yahoo Home product, animated across their states." />
 <meta name="robots" content="noindex" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="d5.css?v=2" />
+<link rel="stylesheet" href="d5.css?v=3" />
 </head>
 <body>
 
@@ -18,15 +18,14 @@
   <a href="#top" class="brand" aria-label="Yahoo Scouts">
     <img src="../assets/brand/yahoo-logo.png" class="brand-logo" alt="Yahoo" />
     <span class="brand-sub">scouts</span>
-    <span class="brand-badge">Entrega&nbsp;#5</span>
+    <span class="brand-badge">Delivery&nbsp;#5</span>
   </a>
   <nav class="nav-links">
     <a href="#intro">Intro</a>
-    <a href="#product">En&nbsp;producto</a>
-    <a href="#states">Estados</a>
-    <a href="#squad">El&nbsp;Squad</a>
-    <a href="#system">Tamaños</a>
-    <a href="#next">Qué&nbsp;sigue</a>
+    <a href="#product">In&nbsp;Product</a>
+    <a href="#states">States</a>
+    <a href="#squad">The&nbsp;Squad</a>
+    <a href="#system">Sizes</a>
   </nav>
 </header>
 
@@ -34,144 +33,123 @@
 
   <!-- ============ INTRO ============ -->
   <section class="hero-intro" id="intro">
-    <div class="hero-inner hero-grid">
-      <div>
-        <p class="eyebrow">Entrega #5 · Los scouts, vivos en el producto</p>
-        <h1 class="hero-title">No es un set de íconos.<br><span class="hl">Es un elenco que vive en Yahoo&nbsp;Home.</span></h1>
-        <p class="hero-lede">Esta ronda muestra los scouts finales <b>aplicados al producto real</b> —
-        y por primera vez con sus <b>estados animados</b>: researching, greeting, sleeping, dormant.</p>
-        <div class="chips">
-          <div class="saidchip"><b>Qué mostramos</b>Aplicados a los UI templates de Yahoo Home.</div>
-          <div class="saidchip"><b>Lo nuevo</b>Estados animados de Gaming y Horoscope.</div>
-          <div class="saidchip"><b>Se mantiene</b>Mismo scout, todos los tamaños.</div>
-        </div>
-      </div>
-      <div class="hero-media">
-        <div class="browser">
-          <div class="browser-bar"><span></span><span></span><span></span></div>
-          <img src="media/desktop-ui.jpg" alt="Yahoo Home con el squad de scouts" loading="eager" />
-        </div>
-      </div>
+    <div class="hero-inner">
+      <p class="eyebrow">Delivery #5 · Scouts, live in the product</p>
+      <h1 class="hero-title">Not a set of icons.<br><span class="hl">A cast that lives in Yahoo&nbsp;Home.</span></h1>
+      <p class="hero-lede">The final scouts, dropped straight into the real product — and, for the first
+      time, <b>animated across their states</b>: researching, greeting, sleeping, dormant.</p>
     </div>
   </section>
 
-  <!-- ============ EN PRODUCTO ============ -->
+  <!-- ============ IN PRODUCT (hero section) ============ -->
   <section class="section" id="product">
     <div class="section-head reveal">
-      <p class="eyebrow">01 · En producto</p>
-      <h2>Así viven en Yahoo Home</h2>
-      <p class="section-lede">Los scouts no son stickers sueltos: son el <b>squad</b> del Home —
-      avatar en el feed, cara del widget, tarjeta de actividad. Estos son los templates reales.</p>
+      <p class="eyebrow">01 · In Product</p>
+      <h2>Our scouts, inside Yahoo Home</h2>
+      <p class="section-lede">They're not loose stickers — they're the Home's <b>squad</b>: the Scout
+      Squad grid, the activity feed, the category rail. Here they are, live in the real product.</p>
     </div>
-    <div class="product-row reveal">
-      <figure class="device browser">
-        <div class="browser-bar"><span></span><span></span><span></span></div>
-        <img src="media/desktop-ui.jpg" alt="Yahoo Home desktop con scouts" loading="lazy" />
-        <figcaption>Desktop · squad grid, widgets y "Scout Activity" con estados</figcaption>
-      </figure>
-      <figure class="device phone">
+
+    <!-- DESKTOP composite: real frame + our scouts overlaid on the Scout Squad + Activity -->
+    <div class="home reveal">
+      <div class="browser-bar"><span></span><span></span><span></span></div>
+      <div class="home-shot">
+        <img class="shot" src="media/desktop-ui.jpg" alt="Yahoo Home desktop" loading="eager" />
+        <div class="ovl squad-ovl">
+          <div class="ov-h">Your Scout Squad</div>
+          <div class="ov-grid">
+            <figure class="ov-tile"><img src="media/books.jpg" alt=""><figcaption>Books</figcaption></figure>
+            <figure class="ov-tile"><video src="media/gaming-greeting.mp4" poster="media/gaming-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Gaming</figcaption></figure>
+            <figure class="ov-tile"><video src="media/horoscope-greeting.mp4" poster="media/horoscope-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Horoscope</figcaption></figure>
+            <figure class="ov-tile"><img src="media/science.jpg" alt=""><figcaption>Science</figcaption></figure>
+            <figure class="ov-tile"><img src="media/sports.jpg" alt=""><figcaption>Sports</figcaption></figure>
+            <figure class="ov-tile"><video src="media/technology-active.mp4" poster="media/technology-active.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Technology</figcaption></figure>
+            <figure class="ov-tile"><img src="media/weather.jpg" alt=""><figcaption>Weather</figcaption></figure>
+          </div>
+          <div class="ov-btns"><span class="ov-btn">Show all 22 ▾</span><span class="ov-btn ghost">+ Recruit a scout</span></div>
+          <div class="ov-h ov-h-sub">Scout Activity</div>
+          <div class="ov-acts">
+            <figure class="ov-act scan"><video src="media/horoscope-researching.mp4" poster="media/horoscope-researching.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption><b>Horoscope</b><span class="tag t-scan">Scanning</span>Reading today's transits<small>now</small></figcaption></figure>
+            <figure class="ov-act err"><img src="media/sports.jpg" alt=""><figcaption><b>Sports</b><span class="tag t-err">Error</span>Missed the replay — retrying<small>now</small></figcaption></figure>
+            <figure class="ov-act wake"><video src="media/gaming-dormant.mp4" poster="media/gaming-dormant.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption><b>Gaming</b><span class="tag t-wake">Waking in 2</span>Booting up next match<small>1m</small></figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="cap-note reveal">Desktop · our scouts replace every avatar in the Scout Squad grid and the activity feed — moving where we have animation.</p>
+
+    <!-- MOBILE composite: real frame + our scouts overlaid on the category rail -->
+    <div class="phones reveal">
+      <div class="phone">
         <div class="phone-notch"></div>
-        <img src="media/mobile-ui.jpg" alt="Yahoo Home mobile con scouts" loading="lazy" />
-        <figcaption>Mobile · el feed con un scout por fuente</figcaption>
-      </figure>
+        <div class="home-shot">
+          <img class="shot" src="media/mobile-ui.jpg" alt="Yahoo Home mobile" loading="lazy" />
+          <div class="ovl rail-ovl">
+            <div class="rail-circ all"><span class="rc-collage"><img src="media/gaming-greeting.jpg" alt=""><img src="media/horoscope-greeting.jpg" alt=""><img src="media/books.jpg" alt=""><img src="media/weather.jpg" alt=""></span><figcaption>All</figcaption></div>
+            <div class="rail-circ"><video src="media/gaming-greeting.mp4" poster="media/gaming-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Gaming</figcaption></div>
+            <div class="rail-circ"><video src="media/horoscope-greeting.mp4" poster="media/horoscope-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Horoscope</figcaption></div>
+            <div class="rail-circ"><img src="media/books.jpg" alt=""><figcaption>Books</figcaption></div>
+            <div class="rail-circ"><img src="media/science.jpg" alt=""><figcaption>Science</figcaption></div>
+            <div class="rail-circ"><img src="media/sports.jpg" alt=""><figcaption>Sports</figcaption></div>
+            <div class="rail-circ"><img src="media/weather.jpg" alt=""><figcaption>Weather</figcaption></div>
+          </div>
+        </div>
+      </div>
+      <p class="cap-note">Mobile · the category rail carries our scouts as circular avatars — same cast, small footprint.</p>
     </div>
   </section>
   <div class="divider"></div>
 
-  <!-- ============ ESTADOS ============ -->
+  <!-- ============ STATES ============ -->
   <section class="section" id="states">
     <div class="section-head reveal">
-      <p class="eyebrow">02 · Estados</p>
-      <h2>Un scout no es una imagen:<br>es un personaje con estados</h2>
-      <p class="section-lede">Cada scout cicla por su día — <b>researching → greeting → sleeping → dormant</b>.
-      Tocá los estados y miralos cambiar en vivo, como se verían en el producto.</p>
+      <p class="eyebrow">02 · States</p>
+      <h2>A scout isn't an image —<br>it's a character with states</h2>
+      <p class="section-lede">Each scout moves through its day: <b>researching → greeting → sleeping → dormant</b>.
+      Same character, four energies — here's the full cycle for each.</p>
     </div>
 
-    <!-- HOROSCOPE state player (widget del rail) -->
-    <div class="splayer reveal" data-scout="horoscope" data-start="researching">
-      <div class="sp-stage">
-        <div class="sp-cardhead">
-          <span class="sp-dot"></span>
-          <span class="sp-title">Horoscope Scout</span>
-          <span class="sp-app">Yahoo Home · widget</span>
-        </div>
-        <div class="sp-media">
-          <video class="sp-vid" data-state="researching" data-say="Leyendo el cielo · researching" src="media/horoscope-researching.mp4" poster="media/horoscope-researching.jpg" muted loop playsinline preload="none"></video>
-          <video class="sp-vid" data-state="greeting"    data-say="Buenos días ✨ · greeting"        src="media/horoscope-greeting.mp4"    poster="media/horoscope-greeting.jpg"    muted loop playsinline preload="none"></video>
-          <video class="sp-vid" data-state="sleeping"    data-say="Descansando · sleeping"           src="media/horoscope-sleeping.mp4"    poster="media/horoscope-sleeping.jpg"    muted loop playsinline preload="none"></video>
-          <video class="sp-vid" data-state="dormant"     data-say="Dormant · tocá para despertar"    src="media/horoscope-dormant.mp4"     poster="media/horoscope-dormant.jpg"     muted loop playsinline preload="none"></video>
-        </div>
-        <div class="sp-status"><span class="sp-say">Leyendo el cielo · researching</span></div>
+    <!-- HOROSCOPE row -->
+    <div class="staterow reveal">
+      <div class="sr-desc">
+        <span class="chip chip-c">Horoscope</span>
+        <h3>The old-soul guru</h3>
+        <p>A serene spiritual guru with a sly wink of snobbery. He reads the stars like sacred
+        scripture — and, yes, he quietly judges your sign. But he means well.</p>
       </div>
-      <div class="sp-side">
-        <span class="chip chip-c">La mística del cast</span>
-        <h3>El Horóscopo, hora por hora</h3>
-        <p class="sp-copy">Antes del amanecer ya está despierto leyendo los tránsitos; al mediodía te
-        saluda; de noche baja a reposo y entra en dormant. El <b>mismo personaje</b>, cuatro energías.</p>
-        <div class="sp-chips" role="tablist" aria-label="Estados">
-          <button class="sp-chip" data-go="researching">Researching</button>
-          <button class="sp-chip" data-go="greeting">Greeting</button>
-          <button class="sp-chip" data-go="sleeping">Sleeping</button>
-          <button class="sp-chip" data-go="dormant">Dormant</button>
-        </div>
+      <div class="sr-clips">
+        <figure><video src="media/horoscope-researching.mp4" poster="media/horoscope-researching.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Researching</figcaption></figure>
+        <figure><video src="media/horoscope-greeting.mp4" poster="media/horoscope-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Greeting</figcaption></figure>
+        <figure><video src="media/horoscope-sleeping.mp4" poster="media/horoscope-sleeping.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Sleeping</figcaption></figure>
+        <figure><video src="media/horoscope-dormant.mp4" poster="media/horoscope-dormant.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Dormant</figcaption></figure>
       </div>
     </div>
 
-    <!-- GAMING state player (tile del squad / arcade) -->
-    <div class="splayer alt reveal" data-scout="gaming" data-start="researching">
-      <div class="sp-side">
-        <span class="chip chip-p">El icónico · lo que ya funcionó</span>
-        <h3>El Gaming, en su maratón</h3>
-        <p class="sp-copy">Cabeza-cubo que flota y rota. Está <b>en la partida</b> (researching), te tira
-        el saludo (greeting), cae rendido (sleeping) y se apaga (dormant). No mira el juego: lo juega.</p>
-        <div class="sp-chips" role="tablist" aria-label="Estados">
-          <button class="sp-chip" data-go="researching">Researching</button>
-          <button class="sp-chip" data-go="greeting">Greeting</button>
-          <button class="sp-chip" data-go="sleeping">Sleeping</button>
-          <button class="sp-chip" data-go="dormant">Dormant</button>
-        </div>
+    <!-- GAMING row -->
+    <div class="staterow reveal">
+      <div class="sr-desc">
+        <span class="chip chip-p">Gaming</span>
+        <h3>The effortless winner</h3>
+        <p>Impossibly cool and wired to win — thumbs faster than the netcode. By the time you've
+        logged in, he's already three levels ahead. And he knows it.</p>
       </div>
-      <div class="sp-stage">
-        <div class="sp-cardhead">
-          <span class="sp-dot"></span>
-          <span class="sp-title">Gaming Scout</span>
-          <span class="sp-app">Yahoo Home · squad tile</span>
-        </div>
-        <div class="sp-media">
-          <video class="sp-vid" data-state="researching" data-say="En la partida · researching"    src="media/gaming-researching.mp4" poster="media/gaming-researching.jpg" muted loop playsinline preload="none"></video>
-          <video class="sp-vid" data-state="greeting"    data-say="GG 👋 · greeting"                src="media/gaming-greeting.mp4"    poster="media/gaming-greeting.jpg"    muted loop playsinline preload="none"></video>
-          <video class="sp-vid" data-state="sleeping"    data-say="AFK · sleeping"                  src="media/gaming-sleeping.mp4"    poster="media/gaming-sleeping.jpg"    muted loop playsinline preload="none"></video>
-          <video class="sp-vid" data-state="dormant"     data-say="Dormant · tocá para despertar"   src="media/gaming-dormant.mp4"     poster="media/gaming-dormant.jpg"     muted loop playsinline preload="none"></video>
-        </div>
-        <div class="sp-status"><span class="sp-say">En la partida · researching</span></div>
-      </div>
-    </div>
-
-    <!-- TECHNOLOGY mini: active <-> sleeping -->
-    <div class="mini reveal">
-      <p class="mini-lede">Y no son solo dos scouts: cada personaje tiene su versión <b>activa</b> y su
-      <b>sleeping</b> propia. El Technology, por ejemplo —</p>
-      <div class="mini-pair">
-        <figure>
-          <video src="media/technology-active.mp4" poster="media/technology-active.jpg" class="autovid" muted loop playsinline preload="none"></video>
-          <figcaption>Activo · tipeando</figcaption>
-        </figure>
-        <figure>
-          <img src="media/technology-sleeping.jpg" alt="Technology scout sleeping" loading="lazy" />
-          <figcaption>Sleeping · tecla-luna + ZZZ</figcaption>
-        </figure>
+      <div class="sr-clips">
+        <figure><video src="media/gaming-researching.mp4" poster="media/gaming-researching.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Researching</figcaption></figure>
+        <figure><video src="media/gaming-greeting.mp4" poster="media/gaming-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Greeting</figcaption></figure>
+        <figure><video src="media/gaming-sleeping.mp4" poster="media/gaming-sleeping.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Sleeping</figcaption></figure>
+        <figure><video src="media/gaming-dormant.mp4" poster="media/gaming-dormant.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Dormant</figcaption></figure>
       </div>
     </div>
   </section>
   <div class="divider"></div>
 
-  <!-- ============ EL SQUAD ============ -->
+  <!-- ============ THE SQUAD ============ -->
   <section class="section" id="squad">
     <div class="section-head reveal">
-      <p class="eyebrow">03 · El squad</p>
-      <h2>Todos juntos</h2>
-      <p class="section-lede">Distintos oficios, mismo mundo. Así se leen como un <b>elenco</b> —
-      lo que aparece en "Your Scout Squad".</p>
+      <p class="eyebrow">03 · The Squad</p>
+      <h2>All together</h2>
+      <p class="section-lede">Different beats, one world — the full cast as it shows up in
+      "Your Scout Squad".</p>
     </div>
     <div class="squad reveal">
       <figure class="sq"><video src="media/horoscope-greeting.mp4" poster="media/horoscope-greeting.jpg" class="autovid" muted loop playsinline preload="none"></video><figcaption>Horoscope</figcaption></figure>
@@ -185,49 +163,57 @@
   </section>
   <div class="divider"></div>
 
-  <!-- ============ TAMAÑOS (preservado) ============ -->
+  <!-- ============ SIZES (adaptive, all categories) ============ -->
   <section class="section" id="system">
     <div class="section-head reveal">
-      <p class="eyebrow">04 · Tamaños</p>
-      <h2>Un scout, todos los tamaños</h2>
-      <p class="section-lede">Adaptativo como un logo: grande = cuerpo y escena · chico = un elemento
-      reconocible (24–32px). La cabeza-cubo del Gaming aguanta la reducción.</p>
+      <p class="eyebrow">04 · Sizes</p>
+      <h2>One scout, every size</h2>
+      <p class="section-lede">Adaptive like a logo: large is body-and-scene, small is a single
+      recognizable element (24–32px). Every category in the cast holds up on the way down.</p>
     </div>
-    <div class="footstrip reveal">
-      <div class="foot f-lg"><div class="box img"><img src="media/gaming-greeting.jpg" alt="Gaming full"></div><small>LARGE · escena</small></div>
-      <div class="foot f-md"><div class="box img"><img src="media/gaming-greeting.jpg" alt="Gaming torso" style="object-position:center 20%"></div><small>MEDIUM · torso</small></div>
-      <div class="foot f-sm"><div class="box img"><img src="media/gaming-greeting.jpg" alt="Gaming head" style="object-position:center 12%;transform:scale(1.5)"></div><small>SMALL · 60px</small></div>
-      <div class="foot f-xs"><div class="box img"><img src="media/gaming-greeting.jpg" alt="Gaming icon" style="object-position:center 12%;transform:scale(1.6)"></div><small>24–32px</small></div>
-    </div>
-  </section>
-  <div class="divider"></div>
-
-  <!-- ============ QUÉ SIGUE + RANGE ============ -->
-  <section class="section" id="next">
-    <div class="section-head reveal">
-      <p class="eyebrow">05 · Rango & próximos</p>
-      <h2>Del editorial a lo más raro</h2>
-      <p class="section-lede">Misma base aprobada, distinto voltaje: el registro editorial y humano
-      convive con el empujado, no-humano — y ambos <b>se leen como Yahoo</b>.</p>
-    </div>
-    <div class="range reveal">
-      <figure class="rg">
-        <img src="media/books.jpg" alt="Books editorial" loading="lazy" />
-        <figcaption><b>Base editorial</b>Maduro, ilustrativo, humano.</figcaption>
-      </figure>
-      <figure class="rg">
-        <img src="media/gaming-greeting.jpg" alt="Gaming empujado" loading="lazy" />
-        <figcaption><b>Empujado · más raro</b>No-humano, flota y rota. <i>Weirder is what we want.</i></figcaption>
-      </figure>
-    </div>
-    <div class="two reveal" style="margin-top:clamp(20px,3vw,30px)">
-      <div class="card">
-        <h3 style="font-size:22px">Nosotros (3dar)</h3>
-        <p style="color:var(--ink-soft);margin-top:6px">Más scouts entrando al mundo · más estados · escenas refinadas.</p>
+    <div class="sizes reveal">
+      <div class="sizes-head"><span></span><small>Large · scene</small><small>Medium</small><small>Small · 60px</small><small>24–32px</small></div>
+      <div class="sizerow"><span class="sr-name">Horoscope</span>
+        <div class="sc lg"><img src="media/horoscope-greeting.jpg" style="object-position:center 30%"></div>
+        <div class="sc md"><img src="media/horoscope-greeting.jpg" style="object-position:center 24%;transform:scale(1.35)"></div>
+        <div class="sc sm"><img src="media/horoscope-greeting.jpg" style="object-position:center 20%;transform:scale(1.6)"></div>
+        <div class="sc xs"><img src="media/horoscope-greeting.jpg" style="object-position:center 20%;transform:scale(1.7)"></div>
       </div>
-      <div class="card">
-        <h3 style="font-size:22px">Necesitamos de Yahoo</h3>
-        <p style="color:var(--ink-soft);margin-top:6px">Decisión de layout in-product · aprobación creativa final.</p>
+      <div class="sizerow"><span class="sr-name">Gaming</span>
+        <div class="sc lg"><img src="media/gaming-greeting.jpg" style="object-position:center 22%"></div>
+        <div class="sc md"><img src="media/gaming-greeting.jpg" style="object-position:center 16%;transform:scale(1.4)"></div>
+        <div class="sc sm"><img src="media/gaming-greeting.jpg" style="object-position:center 12%;transform:scale(1.7)"></div>
+        <div class="sc xs"><img src="media/gaming-greeting.jpg" style="object-position:center 12%;transform:scale(1.8)"></div>
+      </div>
+      <div class="sizerow"><span class="sr-name">Books</span>
+        <div class="sc lg"><img src="media/books.jpg" style="object-position:center 30%"></div>
+        <div class="sc md"><img src="media/books.jpg" style="object-position:center 26%;transform:scale(1.35)"></div>
+        <div class="sc sm"><img src="media/books.jpg" style="object-position:center 24%;transform:scale(1.6)"></div>
+        <div class="sc xs"><img src="media/books.jpg" style="object-position:center 24%;transform:scale(1.7)"></div>
+      </div>
+      <div class="sizerow"><span class="sr-name">Technology</span>
+        <div class="sc lg"><img src="media/technology-sleeping.jpg" style="object-position:center 34%"></div>
+        <div class="sc md"><img src="media/technology-sleeping.jpg" style="object-position:center 34%;transform:scale(1.35)"></div>
+        <div class="sc sm"><img src="media/technology-sleeping.jpg" style="object-position:center 34%;transform:scale(1.55)"></div>
+        <div class="sc xs"><img src="media/technology-sleeping.jpg" style="object-position:center 34%;transform:scale(1.7)"></div>
+      </div>
+      <div class="sizerow"><span class="sr-name">Science</span>
+        <div class="sc lg"><img src="media/science.jpg" style="object-position:center 26%"></div>
+        <div class="sc md"><img src="media/science.jpg" style="object-position:center 24%;transform:scale(1.3)"></div>
+        <div class="sc sm"><img src="media/science.jpg" style="object-position:center 22%;transform:scale(1.5)"></div>
+        <div class="sc xs"><img src="media/science.jpg" style="object-position:center 22%;transform:scale(1.6)"></div>
+      </div>
+      <div class="sizerow"><span class="sr-name">Sports</span>
+        <div class="sc lg"><img src="media/sports.jpg" style="object-position:center 26%"></div>
+        <div class="sc md"><img src="media/sports.jpg" style="object-position:center 24%;transform:scale(1.35)"></div>
+        <div class="sc sm"><img src="media/sports.jpg" style="object-position:center 22%;transform:scale(1.6)"></div>
+        <div class="sc xs"><img src="media/sports.jpg" style="object-position:center 22%;transform:scale(1.7)"></div>
+      </div>
+      <div class="sizerow"><span class="sr-name">Weather</span>
+        <div class="sc lg"><img src="media/weather.jpg" style="object-position:center 30%"></div>
+        <div class="sc md"><img src="media/weather.jpg" style="object-position:center 28%;transform:scale(1.35)"></div>
+        <div class="sc sm"><img src="media/weather.jpg" style="object-position:center 26%;transform:scale(1.6)"></div>
+        <div class="sc xs"><img src="media/weather.jpg" style="object-position:center 26%;transform:scale(1.7)"></div>
       </div>
     </div>
   </section>
@@ -236,13 +222,13 @@
 
 <footer class="footer">
   <img src="../assets/brand/yahoo-logo.png" class="footer-logo" alt="Yahoo" />
-  <p>Yahoo Scouts · Entrega #5 · 3dar — scouts finales aplicados a los UI templates de Yahoo Home,
-  con sus estados animados.</p>
+  <p>Yahoo Scouts · Delivery #5 · 3dar — the final scouts, live in the Yahoo Home product,
+  animated across their states.</p>
 </footer>
 
 <!-- lightbox -->
-<div class="lightbox" id="lightbox"><button class="lightbox-close" id="lbClose" aria-label="Cerrar">&times;</button></div>
+<div class="lightbox" id="lightbox"><button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button></div>
 
-<script src="d5.js?v=2"></script>
+<script src="d5.js?v=3"></script>
 </body>
 </html>

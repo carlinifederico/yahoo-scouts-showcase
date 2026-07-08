@@ -266,3 +266,83 @@ a{color:inherit;text-decoration:none}
 .rg img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
 .rg figcaption{padding:16px 18px;font-size:14px;color:var(--ink-soft)}
 .rg figcaption b{display:block;font-family:var(--font-head);color:var(--purple);font-size:13px;margin-bottom:3px}
+
+/* ============================================================
+   DELIVERY #5 v3 — scouts living inside the real product
+   (UI template as backdrop + our video/still scouts overlaid,
+    scaled with container-query units so they track the frame)
+   ============================================================ */
+
+.cap-note{max-width:var(--maxw);margin:16px auto 0;font-size:13.5px;color:var(--ink-soft);text-align:center}
+
+/* desktop frame */
+.home{max-width:1120px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(20,6,50,.08)}
+.home-shot{position:relative;line-height:0}
+.shot{width:100%;display:block}
+.ovl{position:absolute;background:#F3F2EF;overflow:hidden}
+
+/* ---- Your Scout Squad + Scout Activity overlay (desktop) ---- */
+.squad-ovl{left:9.05%;top:17.3%;width:23.6%;height:80%;container-type:inline-size;padding:0 .6cqw}
+.ov-h{font-family:var(--font-head);font-weight:800;font-size:4.4cqw;letter-spacing:.12cqw;color:#2b2536;text-transform:uppercase;margin:0 0 3cqw}
+.ov-h-sub{margin-top:5cqw}
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3cqw 3cqw}
+.ov-tile{margin:0;display:flex;flex-direction:column}
+.ov-tile img,.ov-tile video{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4.5cqw;display:block;background:#e7e0f4}
+.ov-tile figcaption{font-family:var(--font-head);font-weight:600;font-size:3.2cqw;color:#3a3448;text-align:center;margin-top:1.6cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ov-btns{display:flex;gap:2.4cqw;margin:4cqw 0 0}
+.ov-btn{font-family:var(--font-head);font-weight:600;font-size:3.1cqw;border:.5cqw solid #dcd3ef;border-radius:99cqw;padding:2cqw 3.4cqw;color:#4a4460;white-space:nowrap;background:#fff}
+.ov-btn.ghost{background:transparent}
+.ov-acts{display:flex;gap:2.6cqw;overflow:hidden}
+.ov-act{flex:0 0 44cqw;margin:0;border-radius:4.5cqw;overflow:hidden;background:#efeafc}
+.ov-act.scan{background:#fbfbdd}.ov-act.err{background:#fbe3ef}.ov-act.wake{background:#ece6fb}
+.ov-act img,.ov-act video{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.ov-act figcaption{display:block;padding:1.8cqw 2cqw 2.4cqw;font-size:2.9cqw;line-height:1.28;color:#544d63}
+.ov-act b{font-family:var(--font-head);font-weight:700;font-size:3.5cqw;color:#241f30;display:block;margin-bottom:1cqw}
+.ov-act .tag{display:inline-block;font-family:var(--font-head);font-weight:700;font-size:2.6cqw;text-transform:uppercase;letter-spacing:.1cqw;padding:.7cqw 1.6cqw;border-radius:99cqw;margin-bottom:1.4cqw}
+.t-scan{background:#e8e69a;color:#6b6800}.t-err{background:#f3b7d3;color:#8a1450}.t-wake{background:#cbbaf2;color:#4a2a9a}
+.ov-act small{display:block;margin-top:1cqw;font-size:2.6cqw;color:#8a8398}
+
+/* ---- category rail overlay (mobile) ---- */
+.phones{max-width:360px;margin:clamp(26px,4vw,44px) auto 0}
+.phones .phone{margin:0 auto}
+.phones .home-shot{border-radius:22px;overflow:hidden}
+.phones .shot{border-radius:22px}
+.rail-ovl{left:0;top:25.6%;width:100%;height:11.6%;container-type:inline-size;display:flex;gap:4.4cqw;align-items:flex-start;padding:0 4cqw}
+.rail-circ{flex:0 0 auto;width:13cqw;text-align:center;margin:0}
+.rail-circ img,.rail-circ video{width:13cqw;height:13cqw;border-radius:50%;object-fit:cover;display:block}
+.rail-circ figcaption{font-family:var(--font-head);font-weight:500;font-size:3cqw;color:#3a3448;margin-top:1.6cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:15cqw}
+.rail-circ.all{position:relative}
+.rail-circ.all .rc-collage{display:grid;grid-template-columns:1fr 1fr;width:13cqw;height:13cqw;border-radius:50%;overflow:hidden;border:.9cqw solid var(--cyan)}
+.rail-circ.all .rc-collage img{width:100%;height:100%;border-radius:0}
+.rail-circ.all figcaption{font-weight:700;color:#161219}
+
+/* ---------- states rows ---------- */
+.staterow{display:grid;grid-template-columns:.82fr 2.18fr;gap:clamp(20px,3vw,42px);align-items:center;margin-bottom:clamp(30px,4vw,50px)}
+@media(max-width:820px){.staterow{grid-template-columns:1fr}}
+.sr-desc h3{font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3vw,34px);line-height:1.05;margin:8px 0 8px}
+.sr-desc p{color:var(--ink-soft);font-size:15.5px;max-width:44ch}
+.sr-clips{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,16px)}
+@media(max-width:520px){.sr-clips{grid-template-columns:repeat(2,1fr)}}
+.sr-clips figure{margin:0}
+.sr-clips video{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--radius-sm);box-shadow:var(--shadow-soft);display:block;background:var(--lav-2)}
+.sr-clips figcaption{text-align:center;margin-top:9px;font-family:var(--font-head);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--purple)}
+
+/* ---------- sizes matrix ---------- */
+.sizes{margin-top:8px}
+.sizes-head,.sizerow{display:grid;grid-template-columns:118px 1fr 1fr 1fr 1fr;gap:clamp(10px,1.6vw,20px);align-items:center}
+.sizes-head{margin-bottom:10px}
+.sizes-head small{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-soft);text-align:center}
+.sizerow{padding:14px 0;border-top:1px solid rgba(95,1,209,.1)}
+.sr-name{font-family:var(--font-head);font-weight:700;font-size:15px}
+.sc{justify-self:center;border-radius:12px;overflow:hidden;background:var(--lav-2);box-shadow:var(--shadow-soft)}
+.sc img{width:100%;height:100%;object-fit:cover;display:block}
+.sc.lg{width:118px;height:118px}
+.sc.md{width:74px;height:74px}
+.sc.sm{width:46px;height:46px;border-radius:10px}
+.sc.xs{width:30px;height:30px;border-radius:7px}
+@media(max-width:720px){
+  .sizes-head{display:none}
+  .sizerow{grid-template-columns:64px 1fr 1fr 1fr 1fr;gap:8px;padding:12px 0}
+  .sr-name{font-size:12.5px}
+  .sc.lg{width:70px;height:70px}.sc.md{width:52px;height:52px}.sc.sm{width:38px;height:38px}.sc.xs{width:26px;height:26px}
+}
