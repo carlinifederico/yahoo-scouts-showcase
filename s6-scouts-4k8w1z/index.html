@@ -54,19 +54,24 @@
   .varfig figcaption{margin-top:7px;font-family:var(--font-head);font-size:clamp(10px,1.05vw,12.5px);color:var(--ink-soft);line-height:1.3;text-align:center}
   .varfig figcaption b{color:var(--ink);font-weight:700}
 
-  /* ---- small sizes: circular thumbs of the mains ---- */
-  .small-sec{padding:clamp(26px,4vw,52px) 0 8px;border-top:2px solid var(--lav);margin-top:clamp(10px,2vw,24px)}
-  .small-head{display:flex;align-items:baseline;gap:14px;margin:0 0 clamp(16px,2vw,26px)}
+  /* ---- small sizes: mains inside the product template (V5-style rail) ---- */
+  .small-sec{padding:clamp(26px,4vw,52px) 0 8px;border-top:2px solid var(--lav);margin-top:clamp(10px,2vw,24px);text-align:center}
+  .small-head{display:flex;justify-content:center;align-items:baseline;gap:14px;margin:0 0 8px;flex-wrap:wrap}
   .small-head h2{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.6vw,32px);margin:0;color:var(--ink)}
   .small-head span{font-family:var(--font-head);font-weight:600;font-size:13px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em}
-  .small-scout{margin:0 0 clamp(20px,2.6vw,34px)}
-  .small-label{display:block;font-family:var(--font-head);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--purple);margin:0 0 12px}
-  .small-row{display:flex;flex-wrap:wrap;gap:clamp(14px,2vw,34px);align-items:flex-start}
-  .circ{margin:0;text-align:center;cursor:zoom-in;transition:transform .18s ease}
-  .circ:hover{transform:translateY(-3px)}
-  .circ-img{display:block;width:clamp(66px,8.5vw,128px);height:clamp(66px,8.5vw,128px);border-radius:50%;overflow:hidden;background:#efe6ff;box-shadow:var(--shadow-soft)}
-  .circ-img img{width:100%;height:100%;object-fit:cover;object-position:50% 34%;display:block}
-  .circ figcaption{margin-top:8px;font-family:var(--font-head);font-size:12.5px;font-weight:700;color:var(--ink-soft)}
+  .small-note{font-family:var(--font-head);font-size:14px;color:var(--ink-soft);margin:0 auto 24px;max-width:56ch}
+  .tmpl-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(24px,4vw,64px)}
+  .tmpl{width:min(360px,84vw)}
+  .tmpl-cap{font-family:var(--font-head);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.07em;color:var(--purple);margin:0 0 12px}
+  .sphone{position:relative;background:#161219;border-radius:34px;padding:12px 10px 10px;box-shadow:var(--shadow);container-type:inline-size}
+  .sphone-notch{position:absolute;top:15px;left:50%;transform:translateX(-50%);width:33%;height:2.4%;background:#161219;border-radius:0 0 14px 14px;z-index:3}
+  .sphone-screen{position:relative;border-radius:22px;overflow:hidden}
+  .sphone-screen>img{width:100%;display:block}
+  .srail{position:absolute;left:0;top:24.4%;width:100%;height:15.8%;background:#F3F2EF;overflow:hidden;display:flex;justify-content:center;align-items:flex-start;gap:1.4cqw;padding:0.6cqw 1.6cqw 0;z-index:2}
+  .scirc{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;margin:0;cursor:zoom-in}
+  .scirc-clip{width:12cqw;height:12cqw;border-radius:50%;overflow:hidden;background:#e7e0f4}
+  .scirc-clip img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.16);transform-origin:50% 30%}
+  .scirc figcaption{font-family:var(--font-head);font-weight:700;font-size:3cqw;line-height:1;margin-top:1.3cqw;color:#241f30}
 
   footer.foot6{padding:36px 0 56px;color:var(--ink-soft);font-family:var(--font-head);font-size:13px;text-align:center}
 
@@ -325,32 +330,47 @@
     <section id="small" class="small-sec reveal">
       <div class="small-head">
         <h2>Small sizes</h2>
-        <span>Mains only · A–G · circular</span>
+        <span>Mains only · A–G · in product</span>
       </div>
+      <p class="small-note">The main of every style, shown small inside the Yahoo Home category rail — how each reads at avatar size.</p>
 
-      <div class="small-scout">
-        <span class="small-label">Science</span>
-        <div class="small-row">
-          <figure class="circ" data-full="media/sc_science_a_001.jpg"><span class="circ-img"><img src="media/sc_science_a_001.jpg" alt="Science Style A" /></span><figcaption>A</figcaption></figure>
-          <figure class="circ" data-full="media/sc_science_b_001.jpg"><span class="circ-img"><img src="media/sc_science_b_001.jpg" alt="Science Style B" /></span><figcaption>B</figcaption></figure>
-          <figure class="circ" data-full="media/sc_science_c_001.jpg"><span class="circ-img"><img src="media/sc_science_c_001.jpg" alt="Science Style C" /></span><figcaption>C</figcaption></figure>
-          <figure class="circ" data-full="media/sc_science_d_001.jpg"><span class="circ-img"><img src="media/sc_science_d_001.jpg" alt="Science Style D" /></span><figcaption>D</figcaption></figure>
-          <figure class="circ" data-full="media/sc_science_e_001.jpg"><span class="circ-img"><img src="media/sc_science_e_001.jpg" alt="Science Style E" /></span><figcaption>E</figcaption></figure>
-          <figure class="circ" data-full="media/sc_science_f_001.jpg"><span class="circ-img"><img src="media/sc_science_f_001.jpg" alt="Science Style F" /></span><figcaption>F</figcaption></figure>
-          <figure class="circ" data-full="media/sc_science_g_001.jpg"><span class="circ-img"><img src="media/sc_science_g_001.jpg" alt="Science Style G" /></span><figcaption>G</figcaption></figure>
+      <div class="tmpl-row">
+        <div class="tmpl">
+          <div class="tmpl-cap">Science</div>
+          <div class="sphone">
+            <div class="sphone-notch"></div>
+            <div class="sphone-screen">
+              <img src="media/mobile-ui.jpg" alt="Yahoo Home" />
+              <div class="srail">
+                <figure class="scirc" data-full="media/sc_science_a_001.jpg"><span class="scirc-clip"><img src="media/sc_science_a_001.jpg" alt="Science A" /></span><figcaption>A</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_b_001.jpg"><span class="scirc-clip"><img src="media/sc_science_b_001.jpg" alt="Science B" /></span><figcaption>B</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_c_001.jpg"><span class="scirc-clip"><img src="media/sc_science_c_001.jpg" alt="Science C" /></span><figcaption>C</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_d_001.jpg"><span class="scirc-clip"><img src="media/sc_science_d_001.jpg" alt="Science D" style="transform:scale(1.5);transform-origin:50% 32%" /></span><figcaption>D</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_e_001.jpg"><span class="scirc-clip"><img src="media/sc_science_e_001.jpg" alt="Science E" style="transform:scale(1.45);transform-origin:50% 30%" /></span><figcaption>E</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_f_001.jpg"><span class="scirc-clip"><img src="media/sc_science_f_001.jpg" alt="Science F" style="transform:scale(1.4);transform-origin:50% 34%" /></span><figcaption>F</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_g_001.jpg"><span class="scirc-clip"><img src="media/sc_science_g_001.jpg" alt="Science G" style="transform:scale(1.35);transform-origin:50% 30%" /></span><figcaption>G</figcaption></figure>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="small-scout">
-        <span class="small-label">Books</span>
-        <div class="small-row">
-          <figure class="circ" data-full="media/sc_books_a_001.jpg"><span class="circ-img"><img src="media/sc_books_a_001.jpg" alt="Books Style A" /></span><figcaption>A</figcaption></figure>
-          <figure class="circ" data-full="media/sc_books_b_001.jpg"><span class="circ-img"><img src="media/sc_books_b_001.jpg" alt="Books Style B" /></span><figcaption>B</figcaption></figure>
-          <figure class="circ" data-full="media/sc_books_c_001.jpg"><span class="circ-img"><img src="media/sc_books_c_001.jpg" alt="Books Style C" /></span><figcaption>C</figcaption></figure>
-          <figure class="circ" data-full="media/sc_books_d_001.jpg"><span class="circ-img"><img src="media/sc_books_d_001.jpg" alt="Books Style D" /></span><figcaption>D</figcaption></figure>
-          <figure class="circ" data-full="media/sc_books_e_001.jpg"><span class="circ-img"><img src="media/sc_books_e_001.jpg" alt="Books Style E" /></span><figcaption>E</figcaption></figure>
-          <figure class="circ" data-full="media/sc_books_f_001.jpg"><span class="circ-img"><img src="media/sc_books_f_001.jpg" alt="Books Style F" /></span><figcaption>F</figcaption></figure>
-          <figure class="circ" data-full="media/sc_books_g_001.jpg"><span class="circ-img"><img src="media/sc_books_g_001.jpg" alt="Books Style G" /></span><figcaption>G</figcaption></figure>
+        <div class="tmpl">
+          <div class="tmpl-cap">Books</div>
+          <div class="sphone">
+            <div class="sphone-notch"></div>
+            <div class="sphone-screen">
+              <img src="media/mobile-ui.jpg" alt="Yahoo Home" />
+              <div class="srail">
+                <figure class="scirc" data-full="media/sc_books_a_001.jpg"><span class="scirc-clip"><img src="media/sc_books_a_001.jpg" alt="Books A" /></span><figcaption>A</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_b_001.jpg"><span class="scirc-clip"><img src="media/sc_books_b_001.jpg" alt="Books B" /></span><figcaption>B</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_c_001.jpg"><span class="scirc-clip"><img src="media/sc_books_c_001.jpg" alt="Books C" /></span><figcaption>C</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_d_001.jpg"><span class="scirc-clip"><img src="media/sc_books_d_001.jpg" alt="Books D" style="transform:scale(1.5);transform-origin:50% 32%" /></span><figcaption>D</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_e_001.jpg"><span class="scirc-clip"><img src="media/sc_books_e_001.jpg" alt="Books E" style="transform:scale(1.45);transform-origin:50% 30%" /></span><figcaption>E</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_f_001.jpg"><span class="scirc-clip"><img src="media/sc_books_f_001.jpg" alt="Books F" style="transform:scale(1.4);transform-origin:50% 34%" /></span><figcaption>F</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_g_001.jpg"><span class="scirc-clip"><img src="media/sc_books_g_001.jpg" alt="Books G" style="transform:scale(1.35);transform-origin:50% 30%" /></span><figcaption>G</figcaption></figure>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
