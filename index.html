@@ -76,6 +76,23 @@
   .apair .pcard{width:100%;cursor:zoom-in}
   @media(max-width:720px){.anim-compare{grid-template-columns:1fr;gap:24px}}
 
+  /* ---- desktop product: our scouts in the Your Scout Squad grid (overlay on screenshot) ---- */
+  .desk-sec{padding:clamp(26px,4vw,52px) 0 8px;border-top:2px solid var(--lav);margin-top:clamp(10px,2vw,24px);text-align:center}
+  .desk-head{display:flex;justify-content:center;align-items:baseline;gap:14px;margin:0 0 8px;flex-wrap:wrap}
+  .desk-head h2{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.6vw,32px);margin:0;color:var(--ink)}
+  .desk-head span{font-family:var(--font-head);font-weight:600;font-size:13px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em}
+  .desk-note{font-family:var(--font-head);font-size:14px;color:var(--ink-soft);margin:0 auto 24px;max-width:62ch}
+  .desk{position:relative;max-width:1500px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .desk-shot{width:100%;display:block}
+  .desk-squad{position:absolute;left:14.3%;top:27.2%;width:19.9%;height:38.6%;background:#101010;container-type:inline-size}
+  .dt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9% 6%}
+  .dt-btns{display:flex;gap:5%;margin-top:8%}
+  .dt-btn{font-family:var(--font-head);font-weight:600;font-size:3.3cqw;color:#cfcdd8;background:#17171e;border:1px solid #2f2e38;border-radius:999px;padding:3% 5.5%;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+  .dt{margin:0;cursor:zoom-in;min-width:0}
+  .dt-clip{display:block;width:100%;aspect-ratio:1;border-radius:15%;overflow:hidden;background:#1b1b24}
+  .dt-clip img{width:100%;height:100%;object-fit:cover;display:block}
+  .dt figcaption{margin-top:6%;font-family:var(--font-head);font-weight:600;font-size:4cqw;color:#f3f2f7;line-height:1.12;text-align:center;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
   /* ---- small sizes: mains inside the product template (V5-style rail) ---- */
   .small-sec{padding:clamp(26px,4vw,52px) 0 8px;border-top:2px solid var(--lav);margin-top:clamp(10px,2vw,24px);text-align:center}
   .small-head{display:flex;justify-content:center;align-items:baseline;gap:14px;margin:0 0 8px;flex-wrap:wrap}
@@ -125,6 +142,7 @@
     <a href="#style-f">F</a>
     <a href="#style-g">G</a>
     <span class="nav-sep"></span>
+    <a href="#desktop">Desktop</a>
     <a href="#small">Sizes</a>
     <span class="nav-sep"></span>
     <a href="history.html" class="nav-history">Older&nbsp;Deliveries&nbsp;&rarr;</a>
@@ -450,6 +468,30 @@
           </div>
         </div>
       </article>
+    </section>
+
+    <!-- ============ DESKTOP PRODUCT (scouts in Your Scout Squad grid) ============ -->
+    <section id="desktop" class="desk-sec reveal">
+      <div class="desk-head">
+        <h2>In the desktop product</h2>
+        <span>Your Scout Squad · Science</span>
+      </div>
+      <p class="desk-note">Our seven styles dropped into the Yahoo Home “Your Scout Squad” grid — main choices A &amp; B first. Click any tile to enlarge.</p>
+      <div class="desk">
+        <img class="desk-shot" src="media/desktop-ui-6.jpg" alt="Yahoo Home desktop — Your Scout Squad" />
+        <div class="desk-squad">
+          <div class="dt-grid">
+            <figure class="dt" data-full="media/sc_science_a_001.jpg"><span class="dt-clip"><img src="media/sc_science_a_001.jpg" alt="Hand Painted" /></span><figcaption>Hand Painted</figcaption></figure>
+            <figure class="dt" data-full="media/sc_science_e_001.jpg"><span class="dt-clip"><img src="media/sc_science_e_001.jpg" alt="Playful Cartoon" /></span><figcaption>Playful Cartoon</figcaption></figure>
+            <figure class="dt" data-full="media/sc_science_b_001.jpg"><span class="dt-clip"><img src="media/sc_science_b_001.jpg" alt="Stippled Texture" /></span><figcaption>Stippled Texture</figcaption></figure>
+            <figure class="dt" data-full="media/sc_science_c_001.jpg"><span class="dt-clip"><img src="media/sc_science_c_001.jpg" alt="Pop Halftone" /></span><figcaption>Pop Halftone</figcaption></figure>
+            <figure class="dt" data-full="media/sc_science_d_001.jpg"><span class="dt-clip"><img src="media/sc_science_d_001.jpg" alt="Fine-Line Ink" /></span><figcaption>Fine-Line Ink</figcaption></figure>
+            <figure class="dt" data-full="media/sc_science_f_001.jpg"><span class="dt-clip"><img src="media/sc_science_f_001.jpg" alt="Risograph Print" /></span><figcaption>Risograph Print</figcaption></figure>
+            <figure class="dt" data-full="media/sc_science_g_001.jpg"><span class="dt-clip"><img src="media/sc_science_g_001.jpg" alt="Flat Colors" /></span><figcaption>Flat Colors</figcaption></figure>
+          </div>
+          <div class="dt-btns"><span class="dt-btn">Show all 22 &#9662;</span><span class="dt-btn">+ Recruit a scout</span></div>
+        </div>
+      </div>
     </section>
 
     <!-- ============ SMALL SIZES (mains only) ============ -->
