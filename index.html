@@ -23,6 +23,17 @@
   .scout-band h2{font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3vw,34px);margin:0;color:var(--ink)}
   .scout-band span{font-family:var(--font-head);font-weight:600;font-size:13px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em}
 
+  /* ---- our main choices (highlighted lead section) ---- */
+  .mainchoices{border:2px solid rgba(95,1,209,.28);background:linear-gradient(180deg,rgba(95,1,209,.05),rgba(95,1,209,.015));border-radius:26px;padding:clamp(18px,2.6vw,34px) clamp(16px,2.8vw,38px) clamp(8px,1.4vw,18px);margin:clamp(22px,3.4vw,44px) 0}
+  .mc-band{margin:0 0 clamp(6px,1.4vw,14px)}
+  .mc-eyebrow{display:inline-block;font-family:var(--font-head);font-weight:800;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:var(--purple);border-radius:999px;padding:6px 14px;margin:0 0 12px}
+  .mc-band h2{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,2.9vw,34px);margin:0 0 10px;color:var(--ink)}
+  .mc-lede{font-family:var(--font-head);font-size:clamp(14px,1.5vw,18px);color:var(--ink-soft);line-height:1.5;max-width:76ch;margin:0}
+  .mc-why{font-family:var(--font-head);font-size:clamp(13px,1.35vw,15.5px);color:var(--ink-soft);line-height:1.55;max-width:72ch;margin:2px 0 clamp(14px,1.8vw,22px)}
+  .mainchoices .style-block{border-bottom:none;padding:clamp(10px,1.6vw,20px) 0 clamp(6px,1vw,12px)}
+  .mainchoices .style-block+.style-block{border-top:1px solid rgba(95,1,209,.16)}
+  .mainchoices .sb-letter{background:var(--purple);box-shadow:0 6px 16px rgba(95,1,209,.28)}
+
   /* ---- one style block: Science | Books side by side ---- */
   .style-block{padding:clamp(20px,2.6vw,36px) 0;border-bottom:1px solid rgba(95,1,209,.10)}
   .sb-head{display:flex;align-items:center;gap:12px;margin:0 0 clamp(10px,1.4vw,18px)}
@@ -92,6 +103,8 @@
     <span class="brand-badge">Delivery&nbsp;#6</span>
   </a>
   <nav class="nav-links">
+    <a href="#main-choices" class="nav-history">Main&nbsp;choices</a>
+    <span class="nav-sep"></span>
     <a href="#style-a">A</a>
     <a href="#style-b">B</a>
     <a href="#style-c">C</a>
@@ -116,12 +129,18 @@
       <p>Each style, both scouts side by side — the main one in product, its variations centered below. Click any image to enlarge.</p>
     </section>
 
-    <!-- ============ STYLES (Science | Books) ============ -->
-    <section id="styles">
+    <!-- ============ OUR MAIN CHOICES ============ -->
+    <section id="main-choices" class="mainchoices reveal">
+      <div class="mc-band">
+        <p class="mc-eyebrow">Our Main Choices</p>
+        <h2>Where we'd land</h2>
+        <p class="mc-lede">These are our two principal picks — and, on purpose, the two ends of the whole wide range of styles we've been exploring. Option A is the crisp, modern pole; option B the loose, hand-drawn one. Every other style in this delivery sits somewhere between these two.</p>
+      </div>
 
-      <!-- STYLE A -->
+      <!-- CHOICE A — Hand Painted (was Style A) -->
       <article class="style-block reveal" id="style-a">
         <div class="sb-head"><span class="sb-letter">A</span><h3>Hand Painted</h3></div>
+        <p class="mc-why">One of the most modern, fresh options. Its stylized forms feel light and relaxed, loosening up the more symmetric look — a soft, adaptable and highly functional style, with colors that stay fresh yet vibrant.</p>
         <div class="compare">
           <div class="scout-col">
             <div class="pcard" data-full="media/sc_science_a_001.jpg">
@@ -150,9 +169,44 @@
         </div>
       </article>
 
-      <!-- STYLE B -->
+      <!-- CHOICE B — Playful Cartoon (was Style E) -->
       <article class="style-block reveal" id="style-b">
-        <div class="sb-head"><span class="sb-letter">B</span><h3>Stippled Texture</h3></div>
+        <div class="sb-head"><span class="sb-letter">B</span><h3>Playful Cartoon</h3></div>
+        <p class="mc-why">Our most hand-drawn style — versatile and open to the boldest flights of imagination. Here the palette stays a little softer, letting the drawing and the character take the lead. Friendly and very likeable.</p>
+        <div class="compare">
+          <div class="scout-col">
+            <div class="pcard" data-full="media/sc_science_e_001.jpg">
+              <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+              <div class="pcard-hero"><img src="media/sc_science_e_001.jpg" alt="Science — Playful Cartoon" /></div>
+              <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Science</span></div>
+            </div>
+            <div class="var-row">
+              <figure class="varfig" data-full="media/sc_science_e_002.jpg"><div class="vf-img"><img src="media/sc_science_e_002.jpg" alt="" /></div><figcaption><b>Science</b> · Var 02</figcaption></figure>
+              <figure class="varfig" data-full="media/sc_science_e_003.jpg"><div class="vf-img"><img src="media/sc_science_e_003.jpg" alt="" /></div><figcaption><b>Science</b> · Var 03</figcaption></figure>
+            </div>
+          </div>
+          <div class="scout-col">
+            <div class="pcard" data-full="media/sc_books_e_001.jpg">
+              <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+              <div class="pcard-hero"><img src="media/sc_books_e_001.jpg" alt="Books — Playful Cartoon" /></div>
+              <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Books</span></div>
+            </div>
+            <div class="var-row"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ THE WIDER RANGE (Science | Books) ============ -->
+    <section id="styles">
+      <div class="scout-band">
+        <h2>The wider range</h2>
+        <span>Everything explored between the two poles</span>
+      </div>
+
+      <!-- STYLE C — Stippled Texture (was B) -->
+      <article class="style-block reveal" id="style-c">
+        <div class="sb-head"><span class="sb-letter">C</span><h3>Stippled Texture</h3></div>
         <div class="compare">
           <div class="scout-col">
             <div class="pcard" data-full="media/sc_science_b_001.jpg">
@@ -181,9 +235,9 @@
         </div>
       </article>
 
-      <!-- STYLE C -->
-      <article class="style-block reveal" id="style-c">
-        <div class="sb-head"><span class="sb-letter">C</span><h3>Pop Halftone</h3></div>
+      <!-- STYLE D — Pop Halftone (was C) -->
+      <article class="style-block reveal" id="style-d">
+        <div class="sb-head"><span class="sb-letter">D</span><h3>Pop Halftone</h3></div>
         <div class="compare">
           <div class="scout-col">
             <div class="pcard" data-full="media/sc_science_c_001.jpg">
@@ -211,9 +265,9 @@
         </div>
       </article>
 
-      <!-- STYLE D -->
-      <article class="style-block reveal" id="style-d">
-        <div class="sb-head"><span class="sb-letter">D</span><h3>Fine-Line Ink</h3></div>
+      <!-- STYLE E — Fine-Line Ink (was D) -->
+      <article class="style-block reveal" id="style-e">
+        <div class="sb-head"><span class="sb-letter">E</span><h3>Fine-Line Ink</h3></div>
         <div class="compare">
           <div class="scout-col">
             <div class="pcard" data-full="media/sc_science_d_001.jpg">
@@ -239,33 +293,7 @@
         </div>
       </article>
 
-      <!-- STYLE E -->
-      <article class="style-block reveal" id="style-e">
-        <div class="sb-head"><span class="sb-letter">E</span><h3>Playful Cartoon</h3></div>
-        <div class="compare">
-          <div class="scout-col">
-            <div class="pcard" data-full="media/sc_science_e_001.jpg">
-              <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-              <div class="pcard-hero"><img src="media/sc_science_e_001.jpg" alt="Science — Playful Cartoon" /></div>
-              <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Science</span></div>
-            </div>
-            <div class="var-row">
-              <figure class="varfig" data-full="media/sc_science_e_002.jpg"><div class="vf-img"><img src="media/sc_science_e_002.jpg" alt="" /></div><figcaption><b>Science</b> · Var 02</figcaption></figure>
-              <figure class="varfig" data-full="media/sc_science_e_003.jpg"><div class="vf-img"><img src="media/sc_science_e_003.jpg" alt="" /></div><figcaption><b>Science</b> · Var 03</figcaption></figure>
-            </div>
-          </div>
-          <div class="scout-col">
-            <div class="pcard" data-full="media/sc_books_e_001.jpg">
-              <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-              <div class="pcard-hero"><img src="media/sc_books_e_001.jpg" alt="Books — Playful Cartoon" /></div>
-              <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Books</span></div>
-            </div>
-            <div class="var-row"></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- STYLE F -->
+      <!-- STYLE F — Risograph Print -->
       <article class="style-block reveal" id="style-f">
         <div class="sb-head"><span class="sb-letter">F</span><h3>Risograph Print</h3></div>
         <div class="compare">
@@ -295,7 +323,7 @@
         </div>
       </article>
 
-      <!-- STYLE G -->
+      <!-- STYLE G — Flat Colors -->
       <article class="style-block reveal" id="style-g">
         <div class="sb-head"><span class="sb-letter">G</span><h3>Flat Colors</h3></div>
         <div class="compare">
@@ -332,7 +360,7 @@
         <h2>Small sizes</h2>
         <span>Mains only · A–G · in product</span>
       </div>
-      <p class="small-note">The main of every style, shown small inside the Yahoo Home category rail — how each reads at avatar size.</p>
+      <p class="small-note">The main of every style, shown small inside the Yahoo Home category rail — how each reads at avatar size. Order follows the labels above (A–B are our main choices).</p>
 
       <div class="tmpl-row">
         <div class="tmpl">
@@ -342,13 +370,13 @@
             <div class="sphone-screen">
               <img src="media/mobile-ui.jpg" alt="Yahoo Home" />
               <div class="srail">
-                <figure class="scirc" data-full="media/sc_science_a_001.jpg"><span class="scirc-clip"><img src="media/sc_science_a_001.jpg" alt="Science A" /></span><figcaption>A</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_science_b_001.jpg"><span class="scirc-clip"><img src="media/sc_science_b_001.jpg" alt="Science B" /></span><figcaption>B</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_science_c_001.jpg"><span class="scirc-clip"><img src="media/sc_science_c_001.jpg" alt="Science C" /></span><figcaption>C</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_science_d_001.jpg"><span class="scirc-clip"><img src="media/sc_science_d_001.jpg" alt="Science D" style="transform:scale(1.5);transform-origin:50% 32%" /></span><figcaption>D</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_science_e_001.jpg"><span class="scirc-clip"><img src="media/sc_science_e_001.jpg" alt="Science E" style="transform:scale(1.45);transform-origin:50% 30%" /></span><figcaption>E</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_science_f_001.jpg"><span class="scirc-clip"><img src="media/sc_science_f_001.jpg" alt="Science F" style="transform:scale(1.4);transform-origin:50% 34%" /></span><figcaption>F</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_science_g_001.jpg"><span class="scirc-clip"><img src="media/sc_science_g_001.jpg" alt="Science G" style="transform:scale(1.35);transform-origin:50% 30%" /></span><figcaption>G</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_a_001.jpg"><span class="scirc-clip"><img src="media/sc_science_a_001.jpg" alt="Science — Hand Painted" /></span><figcaption>A</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_e_001.jpg"><span class="scirc-clip"><img src="media/sc_science_e_001.jpg" alt="Science — Playful Cartoon" style="transform:scale(1.45);transform-origin:50% 30%" /></span><figcaption>B</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_b_001.jpg"><span class="scirc-clip"><img src="media/sc_science_b_001.jpg" alt="Science — Stippled Texture" /></span><figcaption>C</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_c_001.jpg"><span class="scirc-clip"><img src="media/sc_science_c_001.jpg" alt="Science — Pop Halftone" /></span><figcaption>D</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_d_001.jpg"><span class="scirc-clip"><img src="media/sc_science_d_001.jpg" alt="Science — Fine-Line Ink" style="transform:scale(1.5);transform-origin:50% 32%" /></span><figcaption>E</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_f_001.jpg"><span class="scirc-clip"><img src="media/sc_science_f_001.jpg" alt="Science — Risograph Print" style="transform:scale(1.4);transform-origin:50% 34%" /></span><figcaption>F</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_science_g_001.jpg"><span class="scirc-clip"><img src="media/sc_science_g_001.jpg" alt="Science — Flat Colors" style="transform:scale(1.35);transform-origin:50% 30%" /></span><figcaption>G</figcaption></figure>
               </div>
             </div>
           </div>
@@ -361,13 +389,13 @@
             <div class="sphone-screen">
               <img src="media/mobile-ui.jpg" alt="Yahoo Home" />
               <div class="srail">
-                <figure class="scirc" data-full="media/sc_books_a_001.jpg"><span class="scirc-clip"><img src="media/sc_books_a_001.jpg" alt="Books A" /></span><figcaption>A</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_books_b_001.jpg"><span class="scirc-clip"><img src="media/sc_books_b_001.jpg" alt="Books B" /></span><figcaption>B</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_books_c_001.jpg"><span class="scirc-clip"><img src="media/sc_books_c_001.jpg" alt="Books C" /></span><figcaption>C</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_books_d_001.jpg"><span class="scirc-clip"><img src="media/sc_books_d_001.jpg" alt="Books D" style="transform:scale(1.5);transform-origin:50% 32%" /></span><figcaption>D</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_books_e_001.jpg"><span class="scirc-clip"><img src="media/sc_books_e_001.jpg" alt="Books E" style="transform:scale(1.45);transform-origin:50% 30%" /></span><figcaption>E</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_books_f_001.jpg"><span class="scirc-clip"><img src="media/sc_books_f_001.jpg" alt="Books F" style="transform:scale(1.4);transform-origin:50% 34%" /></span><figcaption>F</figcaption></figure>
-                <figure class="scirc" data-full="media/sc_books_g_001.jpg"><span class="scirc-clip"><img src="media/sc_books_g_001.jpg" alt="Books G" style="transform:scale(1.35);transform-origin:50% 30%" /></span><figcaption>G</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_a_001.jpg"><span class="scirc-clip"><img src="media/sc_books_a_001.jpg" alt="Books — Hand Painted" /></span><figcaption>A</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_e_001.jpg"><span class="scirc-clip"><img src="media/sc_books_e_001.jpg" alt="Books — Playful Cartoon" style="transform:scale(1.45);transform-origin:50% 30%" /></span><figcaption>B</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_b_001.jpg"><span class="scirc-clip"><img src="media/sc_books_b_001.jpg" alt="Books — Stippled Texture" /></span><figcaption>C</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_c_001.jpg"><span class="scirc-clip"><img src="media/sc_books_c_001.jpg" alt="Books — Pop Halftone" /></span><figcaption>D</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_d_001.jpg"><span class="scirc-clip"><img src="media/sc_books_d_001.jpg" alt="Books — Fine-Line Ink" style="transform:scale(1.5);transform-origin:50% 32%" /></span><figcaption>E</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_f_001.jpg"><span class="scirc-clip"><img src="media/sc_books_f_001.jpg" alt="Books — Risograph Print" style="transform:scale(1.4);transform-origin:50% 34%" /></span><figcaption>F</figcaption></figure>
+                <figure class="scirc" data-full="media/sc_books_g_001.jpg"><span class="scirc-clip"><img src="media/sc_books_g_001.jpg" alt="Books — Flat Colors" style="transform:scale(1.35);transform-origin:50% 30%" /></span><figcaption>G</figcaption></figure>
               </div>
             </div>
           </div>
