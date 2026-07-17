@@ -36,12 +36,13 @@
   .mainchoices .sb-letter{background:var(--purple);box-shadow:0 6px 16px rgba(95,1,209,.28)}
 
   /* ---- hero scout UI: full scout page, swipeable main image + 2 videos (main choices) ---- */
-  .hero-ui{position:relative;max-width:1500px;margin:clamp(16px,2.4vw,30px) auto 0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-ui{position:relative;max-width:1800px;margin:clamp(16px,2.4vw,30px) auto 0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);container-type:inline-size}
   .hero-frame{position:relative;z-index:2;width:100%;display:block;pointer-events:none}
-  .hero-win{position:absolute;z-index:1;left:14.6%;top:19.6%;width:18.7%;height:25.9%;border-radius:2.4%;overflow:hidden;background:#efe6ff}
+  .hero-win{position:absolute;z-index:1;left:14.3%;top:19.4%;width:19.2%;height:29%;border-radius:2.2%;overflow:hidden;background:#101010}
   .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .35s ease}
   .hero-slide.active{opacity:1}
-  .hero-slide img,.hero-slide video{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-slide img,.hero-slide video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(var(--hsc,1.23));transform-origin:50% 42%}
+  .hero-title{position:absolute;z-index:3;left:14.9%;top:47.9%;min-width:7.8%;height:3.7%;display:flex;align-items:flex-end;background:#101010;color:#fff;font-family:var(--font-display);font-weight:700;font-size:1.32cqw;line-height:1;padding:0 .9cqw .15cqw .3cqw}
   .hero-arrow{position:absolute;z-index:3;top:32.5%;transform:translateY(-50%);width:clamp(26px,2.3vw,40px);height:clamp(26px,2.3vw,40px);border-radius:50%;border:none;background:rgba(18,14,26,.34);color:#fff;font-family:var(--font-head);font-size:clamp(15px,1.5vw,21px);line-height:1;display:grid;place-items:center;cursor:pointer;opacity:.4;transition:opacity .18s ease,background .18s ease}
   .hero-ui:hover .hero-arrow{opacity:.72}
   .hero-arrow:hover{opacity:1;background:rgba(18,14,26,.62)}
@@ -103,7 +104,7 @@
   .dt-btn{font-family:var(--font-head);font-weight:600;font-size:3.3cqw;color:#cfcdd8;background:#17171e;border:1px solid #2f2e38;border-radius:999px;padding:3% 5.5%;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
   .dt{margin:0;cursor:zoom-in;min-width:0}
   .dt-clip{display:block;width:100%;aspect-ratio:1;border-radius:15%;overflow:hidden;background:#1b1b24}
-  .dt-clip img{width:100%;height:100%;object-fit:cover;display:block}
+  .dt-clip img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.2);transform-origin:50% 34%}
   .dt figcaption{margin-top:6%;font-family:var(--font-head);font-weight:600;font-size:4cqw;color:#f3f2f7;line-height:1.12;text-align:center;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
   /* ---- small sizes: mains inside the product template (V5-style rail) ---- */
@@ -255,9 +256,9 @@
         </div>
       </article>
 
-      <!-- HERO SCOUT UI — Hand Painted (Science): swipe main image / greeting / researching -->
+      <!-- HERO SCOUT UI — Hand Painted · Science -->
       <div class="hero-ui" data-hero>
-        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — scout page (Hand Painted)" />
+        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — Science scout page (Hand Painted)" />
         <div class="hero-win">
           <figure class="hero-slide active"><img src="media/sc_science_a_001.jpg" alt="Hand Painted — Science" /></figure>
           <figure class="hero-slide"><video src="media/sc_science_a_greeting.mp4" poster="media/sc_science_a_greeting.jpg" muted loop playsinline preload="none"></video></figure>
@@ -265,6 +266,20 @@
         </div>
         <button class="hero-arrow hero-prev" aria-label="Previous">&#8249;</button>
         <button class="hero-arrow hero-next" aria-label="Next">&#8250;</button>
+        <span class="hero-title">Science</span>
+      </div>
+
+      <!-- HERO SCOUT UI — Hand Painted · Books -->
+      <div class="hero-ui" data-hero style="--hsc:1.0">
+        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — Books scout page (Hand Painted)" />
+        <div class="hero-win">
+          <figure class="hero-slide active"><img src="media/sc_books_a_001.jpg" alt="Hand Painted — Books" /></figure>
+          <figure class="hero-slide"><video src="media/sc_books_a_greeting.mp4" poster="media/sc_books_a_greeting.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="hero-slide"><video src="media/sc_books_a_researching.mp4" poster="media/sc_books_a_researching.jpg" muted loop playsinline preload="none"></video></figure>
+        </div>
+        <button class="hero-arrow hero-prev" aria-label="Previous">&#8249;</button>
+        <button class="hero-arrow hero-next" aria-label="Next">&#8250;</button>
+        <span class="hero-title">Books</span>
       </div>
 
       <!-- CHOICE B — Playful Cartoon (was Style E) -->
@@ -337,9 +352,9 @@
         </div>
       </article>
 
-      <!-- HERO SCOUT UI — Playful Cartoon (Science): swipe main image / greeting / researching -->
+      <!-- HERO SCOUT UI — Playful Cartoon · Science -->
       <div class="hero-ui" data-hero>
-        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — scout page (Playful Cartoon)" />
+        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — Science scout page (Playful Cartoon)" />
         <div class="hero-win">
           <figure class="hero-slide active"><img src="media/sc_science_e_001.jpg" alt="Playful Cartoon — Science" /></figure>
           <figure class="hero-slide"><video src="media/sc_science_e_greeting.mp4" poster="media/sc_science_e_greeting.jpg" muted loop playsinline preload="none"></video></figure>
@@ -347,6 +362,20 @@
         </div>
         <button class="hero-arrow hero-prev" aria-label="Previous">&#8249;</button>
         <button class="hero-arrow hero-next" aria-label="Next">&#8250;</button>
+        <span class="hero-title">Science</span>
+      </div>
+
+      <!-- HERO SCOUT UI — Playful Cartoon · Books -->
+      <div class="hero-ui" data-hero>
+        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — Books scout page (Playful Cartoon)" />
+        <div class="hero-win">
+          <figure class="hero-slide active"><img src="media/sc_books_e_001.jpg" alt="Playful Cartoon — Books" /></figure>
+          <figure class="hero-slide"><video src="media/sc_books_e_greeting.mp4" poster="media/sc_books_e_greeting.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="hero-slide"><video src="media/sc_books_e_researching.mp4" poster="media/sc_books_e_researching.jpg" muted loop playsinline preload="none"></video></figure>
+        </div>
+        <button class="hero-arrow hero-prev" aria-label="Previous">&#8249;</button>
+        <button class="hero-arrow hero-next" aria-label="Next">&#8250;</button>
+        <span class="hero-title">Books</span>
       </div>
     </section>
 
