@@ -35,6 +35,19 @@
   .mainchoices .style-block+.style-block{border-top:1px solid rgba(95,1,209,.16)}
   .mainchoices .sb-letter{background:var(--purple);box-shadow:0 6px 16px rgba(95,1,209,.28)}
 
+  /* ---- hero scout UI: full scout page, swipeable main image + 2 videos (main choices) ---- */
+  .hero-ui{position:relative;max-width:1500px;margin:clamp(16px,2.4vw,30px) auto 0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .hero-frame{position:relative;z-index:2;width:100%;display:block;pointer-events:none}
+  .hero-win{position:absolute;z-index:1;left:14.6%;top:19.6%;width:18.7%;height:25.9%;border-radius:2.4%;overflow:hidden;background:#efe6ff}
+  .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .35s ease}
+  .hero-slide.active{opacity:1}
+  .hero-slide img,.hero-slide video{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-arrow{position:absolute;z-index:3;top:32.5%;transform:translateY(-50%);width:clamp(26px,2.3vw,40px);height:clamp(26px,2.3vw,40px);border-radius:50%;border:none;background:rgba(18,14,26,.34);color:#fff;font-family:var(--font-head);font-size:clamp(15px,1.5vw,21px);line-height:1;display:grid;place-items:center;cursor:pointer;opacity:.4;transition:opacity .18s ease,background .18s ease}
+  .hero-ui:hover .hero-arrow{opacity:.72}
+  .hero-arrow:hover{opacity:1;background:rgba(18,14,26,.62)}
+  .hero-prev{left:15.3%}
+  .hero-next{left:30%}
+
   /* ---- one style block: Science | Books side by side ---- */
   .style-block{padding:clamp(20px,2.6vw,36px) 0;border-bottom:1px solid rgba(95,1,209,.10)}
   .sb-head{display:flex;align-items:center;gap:12px;margin:0 0 clamp(10px,1.4vw,18px)}
@@ -242,6 +255,18 @@
         </div>
       </article>
 
+      <!-- HERO SCOUT UI — Hand Painted (Science): swipe main image / greeting / researching -->
+      <div class="hero-ui" data-hero>
+        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — scout page (Hand Painted)" />
+        <div class="hero-win">
+          <figure class="hero-slide active"><img src="media/sc_science_a_001.jpg" alt="Hand Painted — Science" /></figure>
+          <figure class="hero-slide"><video src="media/sc_science_a_greeting.mp4" poster="media/sc_science_a_greeting.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="hero-slide"><video src="media/sc_science_a_researching.mp4" poster="media/sc_science_a_researching.jpg" muted loop playsinline preload="none"></video></figure>
+        </div>
+        <button class="hero-arrow hero-prev" aria-label="Previous">&#8249;</button>
+        <button class="hero-arrow hero-next" aria-label="Next">&#8250;</button>
+      </div>
+
       <!-- CHOICE B — Playful Cartoon (was Style E) -->
       <article class="style-block reveal" id="style-b">
         <div class="sb-head"><span class="sb-letter">B</span><h3>Playful Cartoon</h3></div>
@@ -311,6 +336,18 @@
           </div>
         </div>
       </article>
+
+      <!-- HERO SCOUT UI — Playful Cartoon (Science): swipe main image / greeting / researching -->
+      <div class="hero-ui" data-hero>
+        <img class="hero-frame" src="media/hero-scout-ui.png" alt="Yahoo Home — scout page (Playful Cartoon)" />
+        <div class="hero-win">
+          <figure class="hero-slide active"><img src="media/sc_science_e_001.jpg" alt="Playful Cartoon — Science" /></figure>
+          <figure class="hero-slide"><video src="media/sc_science_e_greeting.mp4" poster="media/sc_science_e_greeting.jpg" muted loop playsinline preload="none"></video></figure>
+          <figure class="hero-slide"><video src="media/sc_science_e_researching.mp4" poster="media/sc_science_e_researching.jpg" muted loop playsinline preload="none"></video></figure>
+        </div>
+        <button class="hero-arrow hero-prev" aria-label="Previous">&#8249;</button>
+        <button class="hero-arrow hero-next" aria-label="Next">&#8250;</button>
+      </div>
     </section>
 
     <!-- ============ THE WIDER RANGE (Science | Books) ============ -->
@@ -583,6 +620,26 @@
       vids.forEach(function (v) { vo.observe(v); });
     } else { vids.forEach(playSafe); }
   }
+
+  /* hero scout UI — swipeable main image / video 1 / video 2 */
+  $all('[data-hero]').forEach(function (hero) {
+    var slides = $all('.hero-slide', hero);
+    if (!slides.length) return;
+    var i = 0;
+    function show(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach(function (s, idx) {
+        var on = idx === i;
+        s.classList.toggle('active', on);
+        var v = $('video', s);
+        if (v) { if (on) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); } }
+      });
+    }
+    var prev = $('.hero-prev', hero), next = $('.hero-next', hero);
+    if (prev) prev.addEventListener('click', function () { show(i - 1); });
+    if (next) next.addEventListener('click', function () { show(i + 1); });
+    show(0);
+  });
 
   /* lightbox */
   var lb = $('#lightbox'), closeBtn = $('#lbClose');
