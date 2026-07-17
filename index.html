@@ -47,7 +47,7 @@
   .pcard{position:relative;width:100%;margin:0;line-height:0;cursor:zoom-in;container-type:inline-size}
   .pcard-frame{position:relative;z-index:2;width:100%;height:auto;display:block;pointer-events:none;filter:drop-shadow(0 18px 38px rgba(60,10,140,.15))}
   .pcard-hero{position:absolute;z-index:1;left:18.3%;top:11.2%;width:34.9%;height:68.8%;border-radius:2.2cqw;overflow:hidden;background:#efe6ff}
-  .pcard-hero img{width:100%;height:100%;object-fit:cover;display:block}
+  .pcard-hero img,.pcard-hero video{width:100%;height:100%;object-fit:cover;display:block}
   .pcard-label{position:absolute;z-index:3;left:54.4%;top:12.8%;width:35.2%;height:52.6%;background:#d9e7f1;border-radius:2.6cqw;padding:2.6% 2.8%;display:flex;flex-direction:column;justify-content:flex-start;gap:2.4%;pointer-events:none}
   .pcard-label .pl-style{font-family:var(--font-head);font-weight:800;font-size:2.4cqw;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);line-height:1}
   .pcard-label .pl-scout{font-family:var(--font-display);font-weight:700;font-size:6.7cqw;line-height:1;color:#141414}
@@ -63,6 +63,17 @@
   .varfig img{width:100%;height:100%;object-fit:cover;display:block}
   .varfig figcaption{margin-top:7px;font-family:var(--font-head);font-size:clamp(10px,1.05vw,12.5px);color:var(--ink-soft);line-height:1.3;text-align:center}
   .varfig figcaption b{color:var(--ink);font-weight:700}
+
+  /* ---- animated states (videos in product, main choices only) ---- */
+  .anim-block{margin-top:clamp(16px,2.4vw,30px)}
+  .anim-cap{font-family:var(--font-head);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin:0 0 10px}
+  .anim-scout{margin:clamp(10px,1.6vw,20px) 0 0}
+  .anim-name{display:block;font-family:var(--font-head);font-weight:700;font-size:13px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+  .anim-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,30px);align-items:start}
+  .apair{margin:0;cursor:zoom-in}
+  .apair .pcard{width:100%;cursor:zoom-in}
+  .apair figcaption{margin-top:8px;font-family:var(--font-head);font-weight:600;font-size:clamp(11px,1.1vw,13px);color:var(--ink-soft);text-align:center}
+  @media(max-width:720px){.anim-row{grid-template-columns:1fr;gap:20px}}
 
   /* ---- small sizes: mains inside the product template (V5-style rail) ---- */
   .small-sec{padding:clamp(26px,4vw,52px) 0 8px;border-top:2px solid var(--lav);margin-top:clamp(10px,2vw,24px);text-align:center}
@@ -167,6 +178,51 @@
             </div>
           </div>
         </div>
+        <div class="anim-block">
+          <div class="anim-cap">Animated states · in product</div>
+          <div class="anim-scout">
+            <span class="anim-name">Science</span>
+            <div class="anim-row">
+              <figure class="apair" data-full="media/sc_science_a_greeting.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_a_greeting.mp4" poster="media/sc_science_a_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Hand Painted</span><span class="pl-scout">Science</span></div>
+                </div>
+                <figcaption>Greeting</figcaption>
+              </figure>
+              <figure class="apair" data-full="media/sc_science_a_researching.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_a_researching.mp4" poster="media/sc_science_a_researching.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Hand Painted</span><span class="pl-scout">Science</span></div>
+                </div>
+                <figcaption>Researching</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="anim-scout">
+            <span class="anim-name">Books</span>
+            <div class="anim-row">
+              <figure class="apair" data-full="media/sc_books_a_greeting.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_a_greeting.mp4" poster="media/sc_books_a_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Hand Painted</span><span class="pl-scout">Books</span></div>
+                </div>
+                <figcaption>Greeting</figcaption>
+              </figure>
+              <figure class="apair" data-full="media/sc_books_a_researching.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_a_researching.mp4" poster="media/sc_books_a_researching.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Hand Painted</span><span class="pl-scout">Books</span></div>
+                </div>
+                <figcaption>Researching</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </article>
 
       <!-- CHOICE B — Playful Cartoon (was Style E) -->
@@ -192,6 +248,51 @@
               <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Books</span></div>
             </div>
             <div class="var-row"></div>
+          </div>
+        </div>
+        <div class="anim-block">
+          <div class="anim-cap">Animated states · in product</div>
+          <div class="anim-scout">
+            <span class="anim-name">Science</span>
+            <div class="anim-row">
+              <figure class="apair" data-full="media/sc_science_e_greeting.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_e_greeting.mp4" poster="media/sc_science_e_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Science</span></div>
+                </div>
+                <figcaption>Greeting</figcaption>
+              </figure>
+              <figure class="apair" data-full="media/sc_science_e_researching.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_e_researching.mp4" poster="media/sc_science_e_researching.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Science</span></div>
+                </div>
+                <figcaption>Researching</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="anim-scout">
+            <span class="anim-name">Books</span>
+            <div class="anim-row">
+              <figure class="apair" data-full="media/sc_books_e_greeting.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_e_greeting.mp4" poster="media/sc_books_e_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Books</span></div>
+                </div>
+                <figcaption>Greeting</figcaption>
+              </figure>
+              <figure class="apair" data-full="media/sc_books_e_researching.mp4">
+                <div class="pcard">
+                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_e_researching.mp4" poster="media/sc_books_e_researching.jpg" muted loop playsinline preload="none"></video></div>
+                  <div class="pcard-label"><span class="pl-style">Playful Cartoon</span><span class="pl-scout">Books</span></div>
+                </div>
+                <figcaption>Researching</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </article>
@@ -432,14 +533,32 @@
     revs.forEach(function (r) { ro.observe(r); });
   } else { revs.forEach(function (r) { r.classList.add('in'); }); }
 
+  /* autoplay-in-view videos (.autovid) */
+  var vids = $all('.autovid');
+  if (vids.length) {
+    var playSafe = function (v) { try { var p = v.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {} };
+    if ('IntersectionObserver' in window) {
+      var vo = new IntersectionObserver(function (ents) {
+        ents.forEach(function (e) { if (e.isIntersecting) playSafe(e.target); else e.target.pause(); });
+      }, { threshold: 0.25 });
+      vids.forEach(function (v) { vo.observe(v); });
+    } else { vids.forEach(playSafe); }
+  }
+
   /* lightbox */
   var lb = $('#lightbox'), closeBtn = $('#lbClose');
   function open(src, alt) {
-    $all('img', lb).forEach(function (n) { n.remove(); });
-    var el = document.createElement('img'); el.src = src; el.alt = alt || '';
+    $all('img,video', lb).forEach(function (n) { n.remove(); });
+    var el;
+    if (/\.(mp4|webm)$/i.test(src)) {
+      el = document.createElement('video');
+      el.src = src; el.muted = true; el.loop = true; el.autoplay = true; el.playsInline = true; el.controls = true;
+    } else {
+      el = document.createElement('img'); el.src = src; el.alt = alt || '';
+    }
     lb.appendChild(el); lb.classList.add('open');
   }
-  function close() { lb.classList.remove('open'); }
+  function close() { lb.classList.remove('open'); $all('video', lb).forEach(function (v) { v.pause(); }); }
   $all('[data-full]').forEach(function (node) {
     node.addEventListener('click', function () {
       var img = $('img', node);
