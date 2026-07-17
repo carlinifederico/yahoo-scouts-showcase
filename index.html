@@ -66,14 +66,14 @@
 
   /* ---- animated states (videos in product, main choices only) ---- */
   .anim-block{margin-top:clamp(16px,2.4vw,30px)}
-  .anim-cap{font-family:var(--font-head);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin:0 0 10px}
-  .anim-scout{margin:clamp(10px,1.6vw,20px) 0 0}
+  .anim-cap{font-family:var(--font-head);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin:0 0 12px}
+  .anim-compare{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,36px);align-items:start}
+  .anim-col{min-width:0}
   .anim-name{display:block;font-family:var(--font-head);font-weight:700;font-size:13px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
-  .anim-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,30px);align-items:start}
+  .anim-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.2vw,16px);align-items:start}
   .apair{margin:0;cursor:zoom-in}
   .apair .pcard{width:100%;cursor:zoom-in}
-  .apair figcaption{margin-top:8px;font-family:var(--font-head);font-weight:600;font-size:clamp(11px,1.1vw,13px);color:var(--ink-soft);text-align:center}
-  @media(max-width:720px){.anim-row{grid-template-columns:1fr;gap:20px}}
+  @media(max-width:720px){.anim-compare{grid-template-columns:1fr;gap:24px}}
 
   /* ---- small sizes: mains inside the product template (V5-style rail) ---- */
   .small-sec{padding:clamp(26px,4vw,52px) 0 8px;border-top:2px solid var(--lav);margin-top:clamp(10px,2vw,24px);text-align:center}
@@ -180,42 +180,44 @@
         </div>
         <div class="anim-block">
           <div class="anim-cap">Animated states · in product</div>
-          <div class="anim-scout">
-            <span class="anim-name">Science</span>
-            <div class="anim-row">
-              <figure class="apair" data-full="media/sc_science_a_greeting.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_a_greeting.mp4" poster="media/sc_science_a_greeting.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Science</span></div>
-                </div>
-              </figure>
-              <figure class="apair" data-full="media/sc_science_a_researching.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_a_researching.mp4" poster="media/sc_science_a_researching.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Science</span></div>
-                </div>
-              </figure>
+          <div class="anim-compare">
+            <div class="anim-col">
+              <span class="anim-name">Science</span>
+              <div class="anim-row">
+                <figure class="apair" data-full="media/sc_science_a_greeting.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_science_a_greeting.mp4" poster="media/sc_science_a_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Science</span></div>
+                  </div>
+                </figure>
+                <figure class="apair" data-full="media/sc_science_a_researching.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_science_a_researching.mp4" poster="media/sc_science_a_researching.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Science</span></div>
+                  </div>
+                </figure>
+              </div>
             </div>
-          </div>
-          <div class="anim-scout">
-            <span class="anim-name">Books</span>
-            <div class="anim-row">
-              <figure class="apair" data-full="media/sc_books_a_greeting.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_a_greeting.mp4" poster="media/sc_books_a_greeting.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Books</span></div>
-                </div>
-              </figure>
-              <figure class="apair" data-full="media/sc_books_a_researching.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_a_researching.mp4" poster="media/sc_books_a_researching.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Books</span></div>
-                </div>
-              </figure>
+            <div class="anim-col">
+              <span class="anim-name">Books</span>
+              <div class="anim-row">
+                <figure class="apair" data-full="media/sc_books_a_greeting.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_books_a_greeting.mp4" poster="media/sc_books_a_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Books</span></div>
+                  </div>
+                </figure>
+                <figure class="apair" data-full="media/sc_books_a_researching.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_books_a_researching.mp4" poster="media/sc_books_a_researching.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Books</span></div>
+                  </div>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
@@ -248,42 +250,44 @@
         </div>
         <div class="anim-block">
           <div class="anim-cap">Animated states · in product</div>
-          <div class="anim-scout">
-            <span class="anim-name">Science</span>
-            <div class="anim-row">
-              <figure class="apair" data-full="media/sc_science_e_greeting.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_e_greeting.mp4" poster="media/sc_science_e_greeting.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Science</span></div>
-                </div>
-              </figure>
-              <figure class="apair" data-full="media/sc_science_e_researching.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_science_e_researching.mp4" poster="media/sc_science_e_researching.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Science</span></div>
-                </div>
-              </figure>
+          <div class="anim-compare">
+            <div class="anim-col">
+              <span class="anim-name">Science</span>
+              <div class="anim-row">
+                <figure class="apair" data-full="media/sc_science_e_greeting.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_science_e_greeting.mp4" poster="media/sc_science_e_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Science</span></div>
+                  </div>
+                </figure>
+                <figure class="apair" data-full="media/sc_science_e_researching.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_science_e_researching.mp4" poster="media/sc_science_e_researching.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Science</span></div>
+                  </div>
+                </figure>
+              </div>
             </div>
-          </div>
-          <div class="anim-scout">
-            <span class="anim-name">Books</span>
-            <div class="anim-row">
-              <figure class="apair" data-full="media/sc_books_e_greeting.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_e_greeting.mp4" poster="media/sc_books_e_greeting.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Books</span></div>
-                </div>
-              </figure>
-              <figure class="apair" data-full="media/sc_books_e_researching.mp4">
-                <div class="pcard">
-                  <img class="pcard-frame" src="media/ui-frame.png" alt="" />
-                  <div class="pcard-hero"><video class="autovid" src="media/sc_books_e_researching.mp4" poster="media/sc_books_e_researching.jpg" muted loop playsinline preload="none"></video></div>
-                  <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Books</span></div>
-                </div>
-              </figure>
+            <div class="anim-col">
+              <span class="anim-name">Books</span>
+              <div class="anim-row">
+                <figure class="apair" data-full="media/sc_books_e_greeting.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_books_e_greeting.mp4" poster="media/sc_books_e_greeting.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Greeting</span><span class="pl-scout">Books</span></div>
+                  </div>
+                </figure>
+                <figure class="apair" data-full="media/sc_books_e_researching.mp4">
+                  <div class="pcard">
+                    <img class="pcard-frame" src="media/ui-frame.png" alt="" />
+                    <div class="pcard-hero"><video class="autovid" src="media/sc_books_e_researching.mp4" poster="media/sc_books_e_researching.jpg" muted loop playsinline preload="none"></video></div>
+                    <div class="pcard-label"><span class="pl-style">Researching</span><span class="pl-scout">Books</span></div>
+                  </div>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
